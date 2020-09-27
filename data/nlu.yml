@@ -1,0 +1,148 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+- intent: thanks
+  examples: |
+    - thanks for the help
+    - thank you so much
+    - thanks a ton
+    - thanks a lot
+    - thank you
+
+- intent: general
+  examples: |
+    - when was iitr established?
+    - where is iitr located?
+    - what is iitr?
+    - what is rank of iitr?
+    - why does iitr exist?
+
+- intent: admissions
+  examples: |
+    - What is the procedure for admission?
+    - How to get admission?
+    - I want to get into IITR
+    - I want admission into IITR
+    - JEE rank for admission?
+
+- intent: undergraduate
+  examples: |
+    - Number of UG degrees available?
+    - What are the UG degrees available?
+    - I want a UG degree 
+    - I want a B.Tech 
+    - I want a B.Arch 
+
+- intent: postgraduate
+  examples: |
+    - Number of PG degrees available?
+    - What are the PG degrees available?
+    - I want a PG degree 
+    - I want an M.Tech degree 
+    - I want a Dual degree 
+
+- intent: phd
+  examples: |
+    - Number of PHD specializations available?
+    - What is the way to apply for PHD
+    - I want a PHD doctorate
+    - I want to participate in SPARK
+
+- intent: departments
+  examples: |
+    - What are the departments available?
+    - Number of departments available?
+    - Is [CSE]{"entity": "department_name"} department there?
+    - B.Tech in [CSE]{"entity": "department_name"} department
+    - Is [ECE]{"entity": "department_name"} department there?
+    - B.Tech in [ECE]{"entity": "department_name"} department
+    - Is [other]{"entity": "department_name"} department there?
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
