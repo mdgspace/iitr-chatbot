@@ -13,6 +13,7 @@ $ source ./venv/bin/activate
 ```
 - Install [RASA Open Source](https://rasa.com/docs/rasa/)
 ```
+$ pip3 install tensorflow
 $ pip3 install rasa==2.0.0rc2
 ```
 - Initialize a **rasa** project
