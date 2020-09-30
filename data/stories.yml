@@ -9,53 +9,17 @@ stories:
   - action: utter_general
   - intent: admissions
   - action: utter_admissions
+  - intent: programme
+    entities:
+    - programme: ["UG", "PG", "PHD"]
+  - action: action_programme
   - intent: departments
     entities:
-    - department_name: ["CSE","ECE"]
+    - department_name: ["CSE","ECE", "CH"]
   - action: utter_departments 
   - action: action_show_department_info
-  - intent: undergraduate
-  - action: utter_undergraduate
   - intent: thanks
   - action: utter_thanks
   - intent: goodbye
   - action: utter_goodbye
   
-
-
-- story: info path
-  steps:
-  - intent: admissions
-  - action: utter_admissions
-  - intent: departments
-  - action: utter_departments
-
-- story: undergrad
-  steps:
-  - intent: undergraduate
-  - action: utter_undergraduate
-  - action: action_show_department_info
-  - intent: thanks
-  - action: utter_thanks
-  - intent: goodbye
-  - action: utter_goodbye
-
-
-- story: postgrad
-  steps:
-  - intent: postgraduate
-  - action: utter_postgraduate
-  - action: action_show_department_info
-  - intent: thanks
-  - action: utter_thanks
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: phd
-  steps:
-  - intent: phd
-  - action: utter_phd
-  - intent: thanks
-  - action: utter_thanks
-  - intent: goodbye
-  - action: utter_goodbye

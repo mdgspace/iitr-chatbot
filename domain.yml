@@ -5,19 +5,22 @@ intents:
   - goodbye
   - thanks
   - admissions
-  - undergraduate
-  - postgraduate
+  - programme
   - departments
   - general
-  - phd
 
 actions:
   - action_show_department_info
+  - action_programme
 
 entities:
+  - programme
   - department_name
 
 slots:
+  programme:
+    type: text
+    auto_fill: True
   department_name:
     type: text
     auto_fill: True
@@ -28,28 +31,19 @@ responses:
   - text: "Welcome to IITR! How may I help you?"
 
   utter_general:
-  - text: "IITR is a premiere enginnering college which was established in 2001 in the district of Haridwar, Uttarakhand, India."
+  - text: "IITR is a premiere engineering college which was established in 2001 in the district of Haridwar, Uttarakhand, India."
 
   utter_thanks:
   - text: "You are welcome!"
 
   utter_departments:
-  - text: "IITR has 11 departments."
-
-  utter_phd:
-  - text: "IITR provides PHD under many specializations"
-
-  utter_undergraduate:
-  - text: "IITR provides both UG courses."
-
-  utter_postgraduate:
-  - text: "IITR provides postgraduate courses."
+  - text: "IITR has 22 departments."
 
   utter_goodbye:
   - text: "Bye, see you at IITR!"
 
   utter_admissions:
-  - text: "IITR admits students through JEE advanced for B.Tech and for B.Arch look up!"
+  - text: "IITR admits students through JEE Advanced for B.Tech and for B.Arch look up!"
 
 session_config:
   session_expiration_time: 60

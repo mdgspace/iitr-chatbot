@@ -30,15 +30,8 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - bbye
 
-# - intent: affirm
-#   examples: |
-#     - yes
-#     - y
-#     - indeed
-#     - of course
-#     - that sounds good
-#     - correct
 
 - intent: thanks
   examples: |
@@ -47,6 +40,9 @@ nlu:
     - thanks a ton
     - thanks a lot
     - thank you
+    - you saved me
+    - Noice
+    - Nice
 
 - intent: general
   examples: |
@@ -55,6 +51,8 @@ nlu:
     - what is iitr?
     - what is rank of iitr?
     - why does iitr exist?
+    - how is iitr?
+    - who is iitr?
 
 - intent: admissions
   examples: |
@@ -63,29 +61,18 @@ nlu:
     - I want to get into IITR
     - I want admission into IITR
     - JEE rank for admission?
+    - Who gets admission into IITR?
 
-- intent: undergraduate
+- intent: programme
   examples: |
-    - Number of UG degrees available?
-    - What are the UG degrees available?
-    - I want a UG degree 
-    - I want a B.Tech 
-    - I want a B.Arch 
-
-- intent: postgraduate
-  examples: |
-    - Number of PG degrees available?
-    - What are the PG degrees available?
-    - I want a PG degree 
-    - I want an M.Tech degree 
-    - I want a Dual degree 
-
-- intent: phd
-  examples: |
-    - Number of PHD specializations available?
-    - What is the way to apply for PHD
-    - I want a PHD doctorate
-    - I want to participate in SPARK
+    - Number of [UG]{"entity": "programme"} degrees available?
+    - Number of [PG]{"entity": "programme"} degrees available?
+    - Can I get a [UG]{"entity": "programme"} degree?
+    - Can I get a [PG]{"entity": "programme"} degree?
+    - Can I do a [PHD]{"entity": "programme"}?
+    - How to apply for [UG]{"entity": "programme"}?
+    - How to apply for [phd]{"entity": "programme"}?
+    - How to apply for [PG]{"entity": "programme"}?
 
 - intent: departments
   examples: |
@@ -95,54 +82,4 @@ nlu:
     - B.Tech in [CSE]{"entity": "department_name"} department
     - Is [ECE]{"entity": "department_name"} department there?
     - B.Tech in [ECE]{"entity": "department_name"} department
-    - Is [other]{"entity": "department_name"} department there?
-
-# - intent: deny
-#   examples: |
-#     - no
-#     - n
-#     - never
-#     - I don't think so
-#     - don't like that
-#     - no way
-
-# - intent: mood_great
-#   examples: |
-#     - perfect
-#     - great
-#     - amazing
-#     - feeling like a king
-#     - wonderful
-#     - I am feeling very good
-#     - I am great
-#     - I am amazing
-#     - I am going to save the world
-#     - super stoked
-#     - extremely good
-#     - so so perfect
-#     - so good
-#     - so perfect
-
-# - intent: mood_unhappy
-#   examples: |
-#     - my day was horrible
-#     - I am sad
-#     - I don't feel very well
-#     - I am disappointed
-#     - super sad
-#     - I'm so sad
-#     - sad
-#     - very sad
-#     - unhappy
-#     - not good
-#     - not very good
-#     - extremly sad
-#     - so saad
-#     - so sad
-
-# - intent: bot_challenge
-#   examples: |
-#     - are you a bot?
-#     - are you a human?
-#     - am I talking to a bot?
-#     - am I talking to a human?
+    - Is [CH]{"entity": "department_name"} department there?

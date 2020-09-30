@@ -7,7 +7,32 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-# - rule: Say 'I am a bot' anytime the user challenges
-#   steps:
-#   - intent: bot_challenge
-#   - action: utter_iamabot
+- rule: Say hi anytime the user says hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say welcome anytime the user says thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Answer about admission anytime the user asks
+  steps:
+  - intent: admissions
+  - action: utter_admissions
+
+- rule: Decide the programme
+  steps:
+  - intent: programme
+    entities:
+    - programme: ["UG", "PG", "PHD"]
+  - action: action_programme
+
+- rule: Decide department
+  steps:
+  - intent: departments
+    entities:
+    - department_name: ["CSE","ECE", "CH"]
+  - action: utter_departments 
+  - action: action_show_department_info
