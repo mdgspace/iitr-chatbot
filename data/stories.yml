@@ -11,13 +11,21 @@ stories:
   - action: utter_admissions
   - intent: programme
     entities:
-    - programme: ["UG", "PG", "PHD"]
+    - programme: ["UG", "PG"]
   - action: action_programme
   - intent: departments
     entities:
-    - department_name: ["CSE","ECE", "CH"]
+    - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
   - action: utter_departments 
   - action: action_show_department_info
+  - intent: course_ug
+  - action: utter_course_ug
+  - intent: course_pg
+  - action: utter_course_pg
+  - intent: faculty
+    entities:
+    - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
+  - action: action_faculty
   - intent: thanks
   - action: utter_thanks
   - intent: goodbye

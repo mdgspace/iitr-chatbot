@@ -4,14 +4,24 @@ intents:
   - greet
   - goodbye
   - thanks
-  - admissions
-  - programme
-  - departments
   - general
+  - admissions
+  - faculty
+  - course_ug
+  - course_pg
+  - programme
+  - fee
+  - acad_cal
+  - centers
+  - departments
+  - branch_change
+  - minors
+  - honors
 
 actions:
   - action_show_department_info
   - action_programme
+  - action_faculty
 
 entities:
   - programme
@@ -44,6 +54,15 @@ responses:
 
   utter_admissions:
   - text: "IITR admits students through JEE Advanced for B.Tech and for B.Arch look up!"
+
+  utter_faculty:
+  - text: "The information about the faculty can be found at the following link:"
+
+  utter_course_ug:
+  - text: "IITR offers multiple undergraduate programmes leading to B.Arch. and B.Tech. degrees, which are of 5 and 4 years duration, respectively."
+
+  utter_course_pg:
+  - text: "IITR offers multiple postgraduate programmes leading to M.Arch. (or M.U.R.P), M.Tech., MBA, and Ph.D. degrees"
 
 session_config:
   session_expiration_time: 60

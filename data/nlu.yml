@@ -1,6 +1,162 @@
 version: "2.0"
 
 nlu:
+
+- synonym: CSE
+  examples: |
+    - CSE
+    - Computer Science and Engineering
+    - CS
+
+- synonym: ECE
+  examples: |
+    - ECE
+    - Electronics and Communication Engineering 
+    - Electronics
+
+- synonym: EE
+  examples: |
+    - EE
+    - Electrical Engineering
+    - Electrical
+
+- synonym: CE
+  examples: |
+    - CE
+    - Civil Engineering
+    - Civil
+
+- synonym: Biotech
+  examples: |
+    - Biotech
+    - Biotechnology
+
+- synonym: CH
+  examples: |
+    - CH
+    - Chemical Engineering
+    - Chemical
+
+- synonym: Arch
+  examples: |
+    - Arch
+    - Architecture
+    - Architecture and Planning
+
+- synonym: ASE
+  examples: |
+    - ASE
+    - Applied Science and Enginnering
+    - AS
+
+- synonym: Chem
+  examples: |
+    - Chem
+    - Chemistry
+
+- synonym: Earth
+  examples: |
+    - Earthquake
+    - Earthquake Enginnering
+    - Earth
+
+- synonym: EarthSci
+  examples: |
+    - GT
+    - GPT
+    - Earth Sciences
+    - Geo tech
+    - Geo Physical tech
+
+- synonym: HSS
+  examples: |
+    - HSS
+    - Humanities
+    - Social Sciences
+    - Humanities and Social Sciences
+
+- synonym: Hydro
+  examples: |
+    - Hydro
+    - Hydrology
+
+- synonym: HRE
+  examples: |
+    - HRE
+    - Hydro and Renewable Energy
+    - Renewable Energy 
+
+- synonym: Management
+  examples: |
+    - Management Studies
+    - Management
+
+- synonym: Maths
+  examples: |
+    - Mathematics
+    - Maths
+    - Math
+    - MSM
+
+- synonym: MIE
+  examples: |
+    - Mechanical and Industrial Engineering
+    - Mechanical
+    - Industrial
+    - MIE
+    - Mech
+
+- synonym: MME
+  examples: |
+    - Metallurgical and Materials Engineering
+    - Meta
+    - MME 
+
+- synonym: Paper
+  examples: |
+    - Paper
+    - Paper Tech
+
+- synonym: Poly
+  examples: |
+    - Polymer and Process Engineering
+    - Poly
+    - Polymer Science 
+
+- synonym: Physics
+  examples: |
+    - Physics
+    - Phy
+
+- synonym: Water
+  examples: |
+    - Water Resources Development and Management
+    - Water
+
+- synonym: UG
+  examples: |
+    - Bachelor's
+    - B.Tech.
+    - B.Arch.
+    - IDD
+    - Integrated Dual Degree
+    - IMS
+    - IMT
+    - M.Sc.
+    - UG
+
+- synonym: PG
+  examples: |
+    - Master's
+    - M.Tech.
+    - M.Arch.
+    - M.U.R.P
+    - P.G. DIploma
+    - MBA
+    - Ph.D.
+    - Doctor of Philosophy?
+    - PG
+
 - intent: greet
   examples: |
     - hey
@@ -63,16 +219,124 @@ nlu:
     - JEE rank for admission?
     - Who gets admission into IITR?
 
+- intent: faculty
+  examples: |
+    - Faculty of [CSE]{"entity": "department_name", "value": "CSE"} branch 
+    - Faculty of [Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} branch
+    - Faculty of [CS]{"entity": "department_name", "value": "CSE"} branch
+    - Faculty of [ECE]{"entity": "department_name", "value": "ECE"} branch
+    - Faculty of [Electronics and Communication Engineering]{"entity": "department_name", "value": "ECE"} branch
+    - Faculty of [Electronics]{"entity": "department_name", "value": "ECE"} branch
+    - Faculty of [EE]{"entity": "department_name", "value": "EE"} branch
+    - Faculty of [Electrical Engineering]{"entity": "department_name", "value": "EE"} branch
+    - Faculty of [Electrical]{"entity": "department_name", "value": "EE"} branch
+    - Faculty of [CE]{"entity": "department_name", "value": "CE"} branch
+    - Faculty of [Civil Engineering]{"entity": "department_name", "value": "CE"} branch
+    - Faculty of [Civil]{"entity": "department_name", "value": "CE"} branch
+    - Faculty of [Biotech]{"entity": "department_name", "value": "Biotech"} branch
+    - Faculty of [Biotechnology]{"entity": "department_name", "value": "Biotech"} branch
+    - Faculty of [CH]{"entity": "department_name", "value": "CH"} branch
+    - Faculty of [Chemical Engineering]{"entity": "department_name", "value": "CH"} branch
+    - Faculty of [Chemical]{"entity": "department_name", "value": "CH"} branch
+    - Faculty of [Arch]{"entity": "department_name", "value": "Arch"} branch
+    - Faculty of [Architecture]{"entity": "department_name", "value": "Arch"} branch
+    - Faculty of [Architecture and Planning]{"entity": "department_name", "value": "Arch"} branch
+    - Faculty of [ASE]{"entity": "department_name", "value": "ASE"} branch
+    - Faculty of [Applied Science and Enginnering]{"entity": "department_name", "value": "ASE"} branch
+    - Faculty of [AS]{"entity": "department_name", "value": "ASE"} branch
+    - Faculty of [Chem]{"entity": "department_name", "value": "Chem"} branch
+    - Faculty of [Chemistry]{"entity": "department_name", "value": "Chem"} branch
+    - Faculty of [Earth]{"entity": "department_name", "value": "Earth"} branch
+    - Faculty of [Earthquake Engineering]{"entity": "department_name", "value": "Earth"} branch
+    - Faculty of [Earthquake]{"entity": "department_name", "value": "Earth"} branch
+    - Faculty of [GT]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [GPT]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [Earth Sciences]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [Geo tech]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [Geo Physical tech]{"entity": "department_name", "value": "EarthSci"} branch   
+    - Faculty of [HSS]{"entity": "department_name", "value": "HSS"} branch
+    - Faculty of [Humanities]{"entity": "department_name", "value": "HSS"} branch
+    - Faculty of [Humanities and Social Sciences]{"entity": "department_name", "value": "HSS"} branch
+    - Faculty of [Social Sciences]{"entity": "department_name", "value": "HSS"} branch    
+    - Faculty of [Hydro]{"entity": "department_name", "value": "Hydro"} branch
+    - Faculty of [Hydrology]{"entity": "department_name", "value": "Hydro"} branch      
+    - Faculty of [HRE]{"entity": "department_name", "value": "HRE"} branch
+    - Faculty of [Renewable Energy]{"entity": "department_name", "value": "HRE"} branch
+    - Faculty of [Hydro and Renewable Energy]{"entity": "department_name", "value": "HRE"} branch
+    - Faculty of [Management]{"entity": "department_name", "value": "Management"} branch
+    - Faculty of [Management Studies]{"entity": "department_name", "value": "Management"} branch
+    - Faculty of [Mathematics]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [Maths]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [Math]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [MSM]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [MIE]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Industrial]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Mechanical and Industrial Engineering]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Mechanical]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Mech]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [MME]{"entity": "department_name", "value": "MME"} branch
+    - Faculty of [Meta]{"entity": "department_name", "value": "MME"} branch
+    - Faculty of [Metallurgical and Materials Engineering]{"entity": "department_name", "value": "MME"} branch
+    - Faculty of [Paper]{"entity": "department_name", "value": "Paper"} branch
+    - Faculty of [Paper Tech]{"entity": "department_name", "value": "Paper"} branch
+    - Faculty of [Poly]{"entity": "department_name", "value": "Poly"} branch
+    - Faculty of [Polymer and Process Engineering]{"entity": "department_name", "value": "Poly"} branch
+    - Faculty of [Polymer Science]{"entity": "department_name", "value": "Poly"} branch
+    - Faculty of [Physics]{"entity": "department_name", "value": "Physics"} branch
+    - Faculty of [Phy]{"entity": "department_name", "value": "Physics"} branch
+    - Faculty of [Water]{"entity": "department_name", "value": "Water"} branch
+    - Faculty of [Water Resources Development and Management]{"entity": "department_name", "value": "Water"} branch
+
+- intent: course_ug
+  examples: |
+    - What are the courses availible for [Bachelor's]{"entity": "programme", "value": "UG"} degree?
+    - What are the courses availible for a [B.Tech]{"entity": "programme", "value": "UG"} degree?
+    - What are the courses availible for [B.Arch]{"entity": "programme", "value": "UG"} degree?
+    - What are the courses availible for an [IDD]{"entity": "programme", "value": "UG"}?
+    - What are the courses availible for an [Integrated Dual Degree]]{"entity": "programme", "value": "UG"}?
+    - What are the courses availible for an [IMS]]{"entity": "programme", "value": "UG"} degree?
+    - What are the courses availible for an [IMT]{"entity": "programme", "value": "UG"} degree?
+    - What are the courses availible for a [M.Sc]{"entity": "programme", "value": "UG"} degree?
+    - Course Structure for [Bachelor's]{"entity": "programme", "value": "UG"} degree
+    - Course Structure for a [B.Tech]{"entity": "programme", "value": "UG"} degree
+    - Course Structure for [B.Arch]{"entity": "programme", "value": "UG"} degree
+    - Course Structure for an [IDD]{"entity": "programme", "value": "UG"}
+    - Course Structure for an [Integrated Dual Degree]{"entity": "programme", "value": "UG"}
+    - Course Structure for an [IMS]{"entity": "programme", "value": "UG"} degree
+    - Course Structure for an [IMT]{"entity": "programme", "value": "UG"} degree
+    - Course Structure for a [M.Sc]{"entity": "programme", "value": "UG"} degree
+
+  
+- intent: course_pg
+  examples: |
+    - What are the courses availible for [Master's]{"entity": "programme", "value": "PG"} degree?
+    - What are the courses availible for a [M.Tech]{"entity": "programme", "value": "PG"} degree?
+    - What are the courses availible for [M.Arch]{"entity": "programme", "value": "PG"} degree?
+    - What are the courses availible for a [M.U.R.P]{"entity": "programme", "value": "PG"}?
+    - What are the courses availible for a [P.G. Diploma]{"entity": "programme", "value": "PG"}?
+    - What are the courses availible for an [MBA]{"entity": "programme", "value": "PG"} degree?
+    - What are the courses availible for a [Ph.D]{"entity": "programme", "value": "PG"} degree?
+    - What are the courses availible for [Doctor of Philosophy]{"entity": "programme", "value": "PG"}?
+    - Course Structure for [Master's]{"entity": "programme", "value": "PG"} degree
+    - Course Structure for a [M.Tech]{"entity": "programme", "value": "PG"} degree
+    - Course Structure for [M.Arch]{"entity": "programme", "value": "PG"} degree
+    - Course Structure for a [M.U.R.P]{"entity": "programme", "value": "PG"}
+    - Course Structure for a [P.G. Diploma]{"entity": "programme", "value": "PG"}
+    - Course Structure for an [MBA]{"entity": "programme", "value": "PG"} degree
+    - Course Structure for a [Ph.D]{"entity": "programme", "value": "PG"} degree
+    - Course Structure for [Doctor of Philosophy]{"entity": "programme", "value": "PG"}
+
+
 - intent: programme
   examples: |
-    - Number of [UG]{"entity": "programme"} degrees available?
-    - Number of [PG]{"entity": "programme"} degrees available?
-    - Can I get a [UG]{"entity": "programme"} degree?
-    - Can I get a [PG]{"entity": "programme"} degree?
-    - Can I do a [PHD]{"entity": "programme"}?
-    - How to apply for [UG]{"entity": "programme"}?
-    - How to apply for [phd]{"entity": "programme"}?
-    - How to apply for [PG]{"entity": "programme"}?
+    - Number of [UG]{"entity": "programme", "value": "UG"} degrees available?
+    - Number of [PG]{"entity": "programme",  "value": "PG"} degrees available?
+    - Can I get a [UG]{"entity": "programme",  "value": "PHD"} degree?
+    - Can I get a [PG]{"entity": "programme",  "value": "PG"} degree?
+    - Can I do a [PHD]{"entity": "programme",  "value": "PHD"}?
+    - How to apply for [UG]{"entity": "programme",  "value": "UG"}?
+    - How to apply for [PHD]{"entity": "programme",  "value": "PHD"}?
+    - How to apply for [PG]{"entity": "programme",  "value": "PG"}?
 
 - intent: departments
   examples: |
@@ -83,3 +347,4 @@ nlu:
     - Is [ECE]{"entity": "department_name"} department there?
     - B.Tech in [ECE]{"entity": "department_name"} department
     - Is [CH]{"entity": "department_name"} department there?
+
