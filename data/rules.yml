@@ -22,6 +22,23 @@ rules:
   - intent: admissions
   - action: utter_admissions
 
+- rule: Answer about Faculties
+  steps:
+  - intent: faculty
+    entities:
+    - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
+  - action: action_faculty
+
+- rule: Answer about Course-Structure-UG
+  steps:
+  - intent: course_ug
+  - action: utter_course_ug
+  
+- rule: Answer about Course-Structure-PG
+  steps:
+  - intent: course_pg
+  - action: utter_course_pg   
+
 - rule: Decide the programme
   steps:
   - intent: programme
@@ -33,6 +50,6 @@ rules:
   steps:
   - intent: departments
     entities:
-    - department_name: ["CSE","ECE", "CH"]
+    - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
   - action: utter_departments 
   - action: action_show_department_info

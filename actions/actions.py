@@ -17,9 +17,8 @@ map_dept = {"CSE": "https://cse.iitr.ac.in/",
             "EE": "https://ee.iitr.ac.in/",
             "Other": "https://www.iitr.ac.in/Main/pages/_en_Departments__en_.html"}
             
-map_programme = {"UG": "IITR provides UG courses in 17 branches.", 
-                "PG": "IITR provides M.Tech in 16 departments.",
-                "PHD": "IITR provides PHD 16 departments."}
+map_programme = {"UG": "IITR provides UG (including M.Sc.) courses in 17 branches.", 
+                "PG": "IITR provides PG (including Ph.D.) courses in 16 departments."}
 
 map_programme_dept = {"UG": "https://www.iitr.ac.in/academics/pages/Undergraduate_Programmes_Including_M_Sc__.html", 
                     "PG": "https://www.iitr.ac.in/admissions/pages/Postgraduate.html",
@@ -55,6 +54,20 @@ class ActionProgramme(Action):
             output = "{}\nPlease find the various programmes available under {} here: {}.".format(map_programme.get(prg),prg,map_programme_dept.get(prg))
         else:
             output = "Please visit https://www.iitr.ac.in/admissions/pages/Freshers'_Special:_Main_Page.html for more information."
+        dispatcher.utter_message(text=output)
+
+        return []
+
+class ActionFaculty(Action):
+    
+    def name(self) -> Text:
+        return "action_faculty"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dept = tracker.slots.get("department_name")
+        output = "The information about the faculty in this {} department can be found at the following link: {}".format(dept,dept)
         dispatcher.utter_message(text=output)
 
         return []
