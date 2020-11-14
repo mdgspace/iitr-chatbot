@@ -17,21 +17,27 @@ intents:
   - branch_change
   - minors
   - honors
+  - administration
 
 actions:
   - action_show_department_info
   - action_programme
   - action_faculty
+  - action_administration
 
 entities:
   - programme
   - department_name
+  - admin_name
 
 slots:
   programme:
     type: text
     auto_fill: True
   department_name:
+    type: text
+    auto_fill: True
+  admin_name:
     type: text
     auto_fill: True
   
@@ -63,6 +69,9 @@ responses:
 
   utter_course_pg:
   - text: "IITR offers multiple postgraduate programmes leading to M.Arch. (or M.U.R.P), M.Tech., MBA, and Ph.D. degrees"
+
+  utter_administration:
+  - text: "Hope this helped!"
 
 session_config:
   session_expiration_time: 60
