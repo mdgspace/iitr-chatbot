@@ -26,11 +26,6 @@ stories:
     entities:
     - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
   - action: action_faculty
-  - intent: administration
-    entities:
-    - admin_name: ["Dean", "Director", "Registrar", "Officer"]
-  - action: action_administration
-  - action: utter_administration
   - intent: thanks
   - action: utter_thanks
   - intent: goodbye
