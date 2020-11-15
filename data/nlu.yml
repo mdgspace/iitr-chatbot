@@ -154,62 +154,8 @@ nlu:
     - P.G. DIploma
     - MBA
     - Ph.D.
-    - DoctorPhilosophy?
+    - Doctor of Philosophy?
     - PG
-
-- synonym: Director
-  examples: |
-    - director
-    - dy. director
-    - deputy director
-    - head
-    - captain
-    - chief
-    - head of the institute
-
-- synonym: Dean
-  examples: |
-    - dean
-    - Administration
-    - DORA
-    - Resources and Alumni Affairs
-    - Finance & Planning
-    - Faculty Affairs
-    - Academic Affairs
-    - Acads
-    - DOAA
-    - ADOAA
-    - ADOAA(Curriculum)
-    - ADOAA(Evaluation)
-    - Sponsored Research & Industrial Consultancy
-    - Students' Welfare
-    - DOSW
-    - Infrastructure
-    - International Relations
-    - Saharanpur Campus
-
-- synonym: Registrar
-  examples: |
-    - Joint Registrar
-    - Asstt. Registrar
-    - Dy. Registrar
-    - PIO
-    - Finance & Accounts
-    - Faculty Affairs
-    - Academics
-    - Internal Audit
-    - Administration
-    - Material Management
-    - Non-Teaching Group A,B,C
-    - Faculty Recruitment 
-    - Saharanpur Campus
-
-- synonym: Officer
-  examples: |
-    - Institute Engineer
-    - Institute Architect	
-    - Sports Officer
-    - Security Officer
 
 - intent: greet
   examples: |
@@ -259,7 +205,7 @@ nlu:
     - when was iitr established?
     - where is iitr located?
     - what is iitr?
-    - what is rankiitr?
+    - what is rank of iitr?
     - why does iitr exist?
     - how is iitr?
     - who is iitr?
@@ -272,133 +218,74 @@ nlu:
     - I want admission into IITR
     - JEE rank for admission?
     - Who gets admission into IITR?
-  
-- intent: administration
-  examples: |
-    - [Dean]{"entity": "admin_name", "value": "Dean"}
-    - [dean]{"entity": "admin_name", "value": "Dean"}
-    - [Director]{"entity": "admin_name", "value": "Director"}
-    - [dy. director]{"entity": "admin_name", "value": "Director"}
-    - [deputy director]{"entity": "admin_name", "value": "Director"}
-    - [head]{"entity": "admin_name", "value": "Director"}
-    - [captain]{"entity": "admin_name", "value": "Director"}
-    - [chief]{"entity": "admin_name", "value": "Director"}
-    - [head of the institute]{"entity": "admin_name", "value": "Director"}
-    - [Registrar]{"entity": "admin_name", "value": "Registrar"}
-    - [Officer]{"entity": "admin_name", "value": "Officer"}
-    - [DORA]{"entity": "admin_name", "value": "Dean"}
-    - [DOAA]{"entity": "admin_name", "value": "Dean"}
-    - [DOSW]{"entity": "admin_name", "value": "Dean"}
-    - [ADOAA]{"entity": "admin_name", "value": "Dean"}
-    - [ADOAA(Curriculum)]{"entity": "admin_name", "value": "Dean"}
-    - [ADOAA(Evaluation)]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Administration]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Acads]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Resources and Alumni Affairs]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Finance & Planning]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Faculty Affairs]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Academic Affairs]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Sponsored Research & Industrial Consultancy]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Students' Welfare]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Infrastructure]{"entity": "admin_name", "value": "Dean"}
-    - dean of [International Relations]{"entity": "admin_name", "value": "Dean"}
-    - dean of [Saharanpur Campus]{"entity": "admin_name", "value": "Dean"}
-    - [Dean]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Administration]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Resources and Alumni Affairs]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Finance & Planning]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Faculty Affairs]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Academic Affairs]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Sponsored Research & Industrial Consultancy]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Students' Welfare]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Infrastructure]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [International Relations]{"entity": "admin_name", "value": "Dean"}
-    - associate dean [Saharanpur Campus]{"entity": "admin_name", "value": "Dean"}
-    - registrar[Joint Registrar]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Asstt. Registrar]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Dy. Registrar]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[PIO]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Finance & Accounts]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Faculty Affairs]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Academics]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Internal Audit]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Administration]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Material Management]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Non-Teaching Group A,B,C]{"entity": "admin_name", "value": "Registrar"}
-    - registrar[Faculty Recruitment]{"entity": "admin_name", "value": "Registrar"} 
-    - registrar[Saharanpur Campus]{"entity": "admin_name", "value": "Registrar"}
-    - officer[Institute Engineer]{"entity": "admin_name", "value": "Officer"}
-    - officer[Institute Architect]{"entity": "admin_name", "value": "Officer"}
-    - officer[Sports Officer]{"entity": "admin_name", "value": "Officer"}
-    - officer[Security Officer]{"entity": "admin_name", "value": "Officer"}
 
 - intent: faculty
   examples: |
-    - Faculty[CSE]{"entity": "department_name", "value": "CSE"} branch 
-    - Faculty[Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} branch
-    - Faculty[CS]{"entity": "department_name", "value": "CSE"} branch
-    - Faculty[ECE]{"entity": "department_name", "value": "ECE"} branch
-    - Faculty[Electronics and Communication Engineering]{"entity": "department_name", "value": "ECE"} branch
-    - Faculty[Electronics]{"entity": "department_name", "value": "ECE"} branch
-    - Faculty[EE]{"entity": "department_name", "value": "EE"} branch
-    - Faculty[Electrical Engineering]{"entity": "department_name", "value": "EE"} branch
-    - Faculty[Electrical]{"entity": "department_name", "value": "EE"} branch
-    - Faculty[CE]{"entity": "department_name", "value": "CE"} branch
-    - Faculty[Civil Engineering]{"entity": "department_name", "value": "CE"} branch
-    - Faculty[Civil]{"entity": "department_name", "value": "CE"} branch
-    - Faculty[Biotech]{"entity": "department_name", "value": "Biotech"} branch
-    - Faculty[Biotechnology]{"entity": "department_name", "value": "Biotech"} branch
-    - Faculty[CH]{"entity": "department_name", "value": "CH"} branch
-    - Faculty[Chemical Engineering]{"entity": "department_name", "value": "CH"} branch
-    - Faculty[Chemical]{"entity": "department_name", "value": "CH"} branch
-    - Faculty[Arch]{"entity": "department_name", "value": "Arch"} branch
-    - Faculty[Architecture]{"entity": "department_name", "value": "Arch"} branch
-    - Faculty[Architecture and Planning]{"entity": "department_name", "value": "Arch"} branch
-    - Faculty[ASE]{"entity": "department_name", "value": "ASE"} branch
-    - Faculty[Applied Science and Enginnering]{"entity": "department_name", "value": "ASE"} branch
-    - Faculty[AS]{"entity": "department_name", "value": "ASE"} branch
-    - Faculty[Chem]{"entity": "department_name", "value": "Chem"} branch
-    - Faculty[Chemistry]{"entity": "department_name", "value": "Chem"} branch
-    - Faculty[Earth]{"entity": "department_name", "value": "Earth"} branch
-    - Faculty[Earthquake Engineering]{"entity": "department_name", "value": "Earth"} branch
-    - Faculty[Earthquake]{"entity": "department_name", "value": "Earth"} branch
-    - Faculty[GT]{"entity": "department_name", "value": "EarthSci"} branch
-    - Faculty[GPT]{"entity": "department_name", "value": "EarthSci"} branch
-    - Faculty[Earth Sciences]{"entity": "department_name", "value": "EarthSci"} branch
-    - Faculty[Geo tech]{"entity": "department_name", "value": "EarthSci"} branch
-    - Faculty[Geo Physical tech]{"entity": "department_name", "value": "EarthSci"} branch   
-    - Faculty[HSS]{"entity": "department_name", "value": "HSS"} branch
-    - Faculty[Humanities]{"entity": "department_name", "value": "HSS"} branch
-    - Faculty[Humanities and Social Sciences]{"entity": "department_name", "value": "HSS"} branch
-    - Faculty[Social Sciences]{"entity": "department_name", "value": "HSS"} branch    
-    - Faculty[Hydro]{"entity": "department_name", "value": "Hydro"} branch
-    - Faculty[Hydrology]{"entity": "department_name", "value": "Hydro"} branch      
-    - Faculty[HRE]{"entity": "department_name", "value": "HRE"} branch
-    - Faculty[Renewable Energy]{"entity": "department_name", "value": "HRE"} branch
-    - Faculty[Hydro and Renewable Energy]{"entity": "department_name", "value": "HRE"} branch
-    - Faculty[Management]{"entity": "department_name", "value": "Management"} branch
-    - Faculty[Management Studies]{"entity": "department_name", "value": "Management"} branch
-    - Faculty[Mathematics]{"entity": "department_name", "value": "Maths"} branch
-    - Faculty[Maths]{"entity": "department_name", "value": "Maths"} branch
-    - Faculty[Math]{"entity": "department_name", "value": "Maths"} branch
-    - Faculty[MSM]{"entity": "department_name", "value": "Maths"} branch
-    - Faculty[MIE]{"entity": "department_name", "value": "MIE"} branch
-    - Faculty[Industrial]{"entity": "department_name", "value": "MIE"} branch
-    - Faculty[Mechanical and Industrial Engineering]{"entity": "department_name", "value": "MIE"} branch
-    - Faculty[Mechanical]{"entity": "department_name", "value": "MIE"} branch
-    - Faculty[Mech]{"entity": "department_name", "value": "MIE"} branch
-    - Faculty[MME]{"entity": "department_name", "value": "MME"} branch
-    - Faculty[Meta]{"entity": "department_name", "value": "MME"} branch
-    - Faculty[Metallurgical and Materials Engineering]{"entity": "department_name", "value": "MME"} branch
-    - Faculty[Paper]{"entity": "department_name", "value": "Paper"} branch
-    - Faculty[Paper Tech]{"entity": "department_name", "value": "Paper"} branch
-    - Faculty[Poly]{"entity": "department_name", "value": "Poly"} branch
-    - Faculty[Polymer and Process Engineering]{"entity": "department_name", "value": "Poly"} branch
-    - Faculty[Polymer Science]{"entity": "department_name", "value": "Poly"} branch
-    - Faculty[Physics]{"entity": "department_name", "value": "Physics"} branch
-    - Faculty[Phy]{"entity": "department_name", "value": "Physics"} branch
-    - Faculty[Water]{"entity": "department_name", "value": "Water"} branch
-    - Faculty[Water Resources Development and Management]{"entity": "department_name", "value": "Water"} branch
+    - Faculty of [CSE]{"entity": "department_name", "value": "CSE"} branch 
+    - Faculty of [Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} branch
+    - Faculty of [CS]{"entity": "department_name", "value": "CSE"} branch
+    - Faculty of [ECE]{"entity": "department_name", "value": "ECE"} branch
+    - Faculty of [Electronics and Communication Engineering]{"entity": "department_name", "value": "ECE"} branch
+    - Faculty of [Electronics]{"entity": "department_name", "value": "ECE"} branch
+    - Faculty of [EE]{"entity": "department_name", "value": "EE"} branch
+    - Faculty of [Electrical Engineering]{"entity": "department_name", "value": "EE"} branch
+    - Faculty of [Electrical]{"entity": "department_name", "value": "EE"} branch
+    - Faculty of [CE]{"entity": "department_name", "value": "CE"} branch
+    - Faculty of [Civil Engineering]{"entity": "department_name", "value": "CE"} branch
+    - Faculty of [Civil]{"entity": "department_name", "value": "CE"} branch
+    - Faculty of [Biotech]{"entity": "department_name", "value": "Biotech"} branch
+    - Faculty of [Biotechnology]{"entity": "department_name", "value": "Biotech"} branch
+    - Faculty of [CH]{"entity": "department_name", "value": "CH"} branch
+    - Faculty of [Chemical Engineering]{"entity": "department_name", "value": "CH"} branch
+    - Faculty of [Chemical]{"entity": "department_name", "value": "CH"} branch
+    - Faculty of [Arch]{"entity": "department_name", "value": "Arch"} branch
+    - Faculty of [Architecture]{"entity": "department_name", "value": "Arch"} branch
+    - Faculty of [Architecture and Planning]{"entity": "department_name", "value": "Arch"} branch
+    - Faculty of [ASE]{"entity": "department_name", "value": "ASE"} branch
+    - Faculty of [Applied Science and Enginnering]{"entity": "department_name", "value": "ASE"} branch
+    - Faculty of [AS]{"entity": "department_name", "value": "ASE"} branch
+    - Faculty of [Chem]{"entity": "department_name", "value": "Chem"} branch
+    - Faculty of [Chemistry]{"entity": "department_name", "value": "Chem"} branch
+    - Faculty of [Earth]{"entity": "department_name", "value": "Earth"} branch
+    - Faculty of [Earthquake Engineering]{"entity": "department_name", "value": "Earth"} branch
+    - Faculty of [Earthquake]{"entity": "department_name", "value": "Earth"} branch
+    - Faculty of [GT]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [GPT]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [Earth Sciences]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [Geo tech]{"entity": "department_name", "value": "EarthSci"} branch
+    - Faculty of [Geo Physical tech]{"entity": "department_name", "value": "EarthSci"} branch   
+    - Faculty of [HSS]{"entity": "department_name", "value": "HSS"} branch
+    - Faculty of [Humanities]{"entity": "department_name", "value": "HSS"} branch
+    - Faculty of [Humanities and Social Sciences]{"entity": "department_name", "value": "HSS"} branch
+    - Faculty of [Social Sciences]{"entity": "department_name", "value": "HSS"} branch    
+    - Faculty of [Hydro]{"entity": "department_name", "value": "Hydro"} branch
+    - Faculty of [Hydrology]{"entity": "department_name", "value": "Hydro"} branch      
+    - Faculty of [HRE]{"entity": "department_name", "value": "HRE"} branch
+    - Faculty of [Renewable Energy]{"entity": "department_name", "value": "HRE"} branch
+    - Faculty of [Hydro and Renewable Energy]{"entity": "department_name", "value": "HRE"} branch
+    - Faculty of [Management]{"entity": "department_name", "value": "Management"} branch
+    - Faculty of [Management Studies]{"entity": "department_name", "value": "Management"} branch
+    - Faculty of [Mathematics]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [Maths]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [Math]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [MSM]{"entity": "department_name", "value": "Maths"} branch
+    - Faculty of [MIE]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Industrial]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Mechanical and Industrial Engineering]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Mechanical]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [Mech]{"entity": "department_name", "value": "MIE"} branch
+    - Faculty of [MME]{"entity": "department_name", "value": "MME"} branch
+    - Faculty of [Meta]{"entity": "department_name", "value": "MME"} branch
+    - Faculty of [Metallurgical and Materials Engineering]{"entity": "department_name", "value": "MME"} branch
+    - Faculty of [Paper]{"entity": "department_name", "value": "Paper"} branch
+    - Faculty of [Paper Tech]{"entity": "department_name", "value": "Paper"} branch
+    - Faculty of [Poly]{"entity": "department_name", "value": "Poly"} branch
+    - Faculty of [Polymer and Process Engineering]{"entity": "department_name", "value": "Poly"} branch
+    - Faculty of [Polymer Science]{"entity": "department_name", "value": "Poly"} branch
+    - Faculty of [Physics]{"entity": "department_name", "value": "Physics"} branch
+    - Faculty of [Phy]{"entity": "department_name", "value": "Physics"} branch
+    - Faculty of [Water]{"entity": "department_name", "value": "Water"} branch
+    - Faculty of [Water Resources Development and Management]{"entity": "department_name", "value": "Water"} branch
 
 - intent: course_ug
   examples: |
@@ -429,7 +316,7 @@ nlu:
     - What are the courses availible for a [P.G. Diploma]{"entity": "programme", "value": "PG"}?
     - What are the courses availible for an [MBA]{"entity": "programme", "value": "PG"} degree?
     - What are the courses availible for a [Ph.D]{"entity": "programme", "value": "PG"} degree?
-    - What are the courses availible for [DoctorPhilosophy]{"entity": "programme", "value": "PG"}?
+    - What are the courses availible for [Doctor of Philosophy]{"entity": "programme", "value": "PG"}?
     - Course Structure for [Master's]{"entity": "programme", "value": "PG"} degree
     - Course Structure for a [M.Tech]{"entity": "programme", "value": "PG"} degree
     - Course Structure for [M.Arch]{"entity": "programme", "value": "PG"} degree
@@ -437,13 +324,13 @@ nlu:
     - Course Structure for a [P.G. Diploma]{"entity": "programme", "value": "PG"}
     - Course Structure for an [MBA]{"entity": "programme", "value": "PG"} degree
     - Course Structure for a [Ph.D]{"entity": "programme", "value": "PG"} degree
-    - Course Structure for [DoctorPhilosophy]{"entity": "programme", "value": "PG"}
+    - Course Structure for [Doctor of Philosophy]{"entity": "programme", "value": "PG"}
 
 
 - intent: programme
   examples: |
-    - Number[UG]{"entity": "programme", "value": "UG"} degrees available?
-    - Number[PG]{"entity": "programme",  "value": "PG"} degrees available?
+    - Number of [UG]{"entity": "programme", "value": "UG"} degrees available?
+    - Number of [PG]{"entity": "programme",  "value": "PG"} degrees available?
     - Can I get a [UG]{"entity": "programme",  "value": "PHD"} degree?
     - Can I get a [PG]{"entity": "programme",  "value": "PG"} degree?
     - Can I do a [PHD]{"entity": "programme",  "value": "PHD"}?
@@ -454,7 +341,7 @@ nlu:
 - intent: departments
   examples: |
     - What are the departments available?
-    - Numberdepartments available?
+    - Number of departments available?
     - Is [CSE]{"entity": "department_name"} department there?
     - B.Tech in [CSE]{"entity": "department_name"} department
     - Is [ECE]{"entity": "department_name"} department there?
