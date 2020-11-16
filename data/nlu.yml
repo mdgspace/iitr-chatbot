@@ -348,3 +348,24 @@ nlu:
     - B.Tech in [ECE]{"entity": "department_name"} department
     - Is [CH]{"entity": "department_name"} department there?
 
+- intent: RTI
+  examples: |
+    - How to apply for RTI?
+    - What are the guidelines to apply for RTI?
+    - How can we get information through RTI?
+    - What is the procedure to apply for RTI?
+    - How to get information under RTI?
+    - How to file an RTI request?
+    - For which information can I file an RTI?
+    - Procedure for filing an RTI?
+
+- intent: Right to Information Act
+  examples: |
+    - How to apply under Right to Information Act?
+    - What are the guidelines to apply under Right to Information Act?
+    - How can we get information under Right to Information Act?
+    - What is the procedure to apply under Right to Information Act?
+    - How to get information under Right to Information Act?
+    - How to file a request under Right to Information Act?
+    - For which information can I file request under Right to Information Act?
+    - Procedure for filing request under Right to Information Act?

@@ -17,6 +17,8 @@ intents:
   - branch_change
   - minors
   - honors
+  - RTI
+  - Right to Information Act
 
 actions:
   - action_show_department_info
@@ -63,6 +65,9 @@ responses:
 
   utter_course_pg:
   - text: "IITR offers multiple postgraduate programmes leading to M.Arch. (or M.U.R.P), M.Tech., MBA, and Ph.D. degrees"
+
+  utter_RTI:
+  - text: "You can find more information about RTI process at https://www.iitr.ac.in/Main/pages/_en_Right_To_Information__en_.html"
 
 session_config:
   session_expiration_time: 60
