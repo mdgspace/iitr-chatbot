@@ -53,3 +53,13 @@ rules:
     - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
   - action: utter_departments 
   - action: action_show_department_info
+
+- rule: Answer RTI Query
+  steps:
+  - intent: RTI
+  - action: utter_RTI
+
+- rule: Answer Right to Information Act Query
+  steps:
+  - intent: Right to Information Act 
+  - action: utter_RTI
