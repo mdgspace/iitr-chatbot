@@ -63,3 +63,25 @@ rules:
   steps:
   - intent: Right to Information Act 
   - action: utter_RTI
+
+- rule: Answer about Acad Calender
+  steps:
+  - intent: acad_cal
+  - action: utter_acad_cal
+
+- rule: Answer about Fee
+  steps:
+  - intent: fee
+  - action: utter_fee
+
+- rule: Answer about Minors and Honors
+  steps:
+  - intent: minors_honors
+  - action: utter_minors_honors
+
+- rule: Answer about Centers
+  steps:
+  - intent: centers
+    entities:
+    - center_name: ["ICC","IIC", "TL", "IPRC", "WFF", "Hospital", "TIDES", "MGCL", "EC", "DIC", "CEC", "CTRANS", "CoEDMM", "COE", "NoidaCentre", "CoN"]
+  - action: action_center
