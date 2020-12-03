@@ -35,6 +35,8 @@ stories:
   - action: utter_research
   - intent: scholarships
   - action: utter_scholarships
+  - intent: recruitments
+  - action: utter_recruitments
   - intent: thanks
   - action: utter_thanks
   - intent: goodbye

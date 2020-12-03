@@ -444,6 +444,19 @@ nlu:
     - what is Criteria for Fee Waiver and MCM?
     - what is Awards/Medals/ Scholarships available to IITR Students?
 
+- intent: recruitments
+  examples: |
+    - How is placements at IITR?
+    - who all come to recruit at Roorkee?
+    - what is the highest package?
+    - Average package
+    - Does Google come?
+    - Microsoft
+    - Amazon
+    - Apple
+    - What is minimum package?
+    - What companies come to IIT Roorkee?
+
 - intent: administration
   examples: |
     - who is the [Dean]{"entity": "admin_name", "value": "Dean"}?
@@ -485,23 +498,23 @@ nlu:
     - associate dean [Infrastructure]{"entity": "admin_name", "value": "Dean"}?
     - associate dean [International Relations]{"entity": "admin_name", "value": "Dean"}?
     - associate dean [Saharanpur Campus]{"entity": "admin_name", "value": "Dean"}?
-    - who is the registrar[Joint Registrar]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Asstt. Registrar]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Dy. Registrar]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[PIO]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Finance & Accounts]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Faculty Affairs]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Academics]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Internal Audit]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Administration]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Material Management]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Non-Teaching Group A,B,C]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar[Faculty Recruitment]{"entity": "admin_name", "value": "Registrar"}? 
-    - who is the registrar[Saharanpur Campus]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the officer[Institute Engineer]{"entity": "admin_name", "value": "Officer"}?
-    - who is the officer[Institute Architect]{"entity": "admin_name", "value": "Officer"}?
-    - who is the officer[Sports Officer]{"entity": "admin_name", "value": "Officer"}?
-    - who is the officer[Security Officer]{"entity": "admin_name", "value": "Officer"}?
+    - who is the [Joint Registrar]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the [Asstt. Registrar]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the [Dy. Registrar]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the [PIO]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Finance & Accounts]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Faculty Affairs]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Academics]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Internal Audit]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Administration]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Material Management]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Non-Teaching Group A,B,C]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Faculty Recruitment]{"entity": "admin_name", "value": "Registrar"}? 
+    - who is the registrar [Saharanpur Campus]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the officer [Institute Engineer]{"entity": "admin_name", "value": "Officer"}?
+    - who is the officer [Institute Architect]{"entity": "admin_name", "value": "Officer"}?
+    - who is the officer [Sports Officer]{"entity": "admin_name", "value": "Officer"}?
+    - who is the officer [Security Officer]{"entity": "admin_name", "value": "Officer"}?
 
 
 
