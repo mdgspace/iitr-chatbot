@@ -26,6 +26,10 @@ stories:
     entities:
     - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
   - action: action_faculty
+  - intent: acad_cal
+  - action: utter_acad_cal
+  - intent: fee
+  - action: utter_fee
   - intent: administration
     entities:
     - admin_name: ["Dean", "Director", "Registrar", "Officer"]

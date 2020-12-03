@@ -154,9 +154,91 @@ nlu:
     - P.G. DIploma
     - MBA
     - Ph.D.
-    - Doctor of Philosophy?
+    - Doctor of Philosophy
     - PG
 
+- synonym: ICC
+  examples: |
+    - ICC
+    - Institute Computer Centre
+
+- synonym: CoN
+  examples: |
+    - Centre of Nanotechnology
+    - Nanotechnology Centre 
+
+- synonym:  NoidaCentre
+  examples: |
+    - Greater Noida Extension Centre IITR
+    - Noida Centre
+
+- synonym: CoE
+  examples: |
+    - Centre of Excellence
+    - Excellence Centre
+
+- synonym: CoEDMM
+  examples: |
+    - Centre of Excellence in Disaster Mitigation & Management
+    - CoEDMM
+
+- synonym: CTRANS
+  examples: |
+    - Centre for Transportation Systems 
+    - CTRANS
+    - Transportation Centre
+
+- synonym: CEC
+  examples: |
+    - Continuing Education Centre
+    - CEC
+    - Education Centre
+
+- synonym: DIC
+  examples: |
+    - Design Innovation Center
+    - Innovation Centre
+    - Design Centre
+
+- synonym: EC
+  examples: |
+    - E-Learning Center
+    - E Learning Center
+
+- synonym: IIC
+  examples: |
+    - IIC
+    - Institute Instrumentation Centre
+
+- synonym: MGCL
+  examples: |
+    - Library
+    - Mahatma Gandhi Central Library
+    - MGCL
+
+- synonym: TL
+  examples: |
+    - Tinkering Lab
+    - Tinkering Labs
+
+- synonym: TIDES
+  examples: |
+    - TIDES Incubation Centre
+    - TIDES
+
+- synonym: Hospital
+  examples: |
+    - Institute Hospital
+    - Hostpital
+
+- synonym: IPRC
+  examples: |
+    - Intellectual Property Rights Cell
+    - IPRC
+
+- synonym: WFF
+  examples: |
+    - Water for Farewell
 - synonym: Director
   examples: |
     - director
@@ -166,6 +248,7 @@ nlu:
     - captain
     - chief
     - head of the institute
+    
 - synonym: Dean
   examples: |
     - dean
@@ -186,6 +269,7 @@ nlu:
     - Infrastructure
     - International Relations
     - Saharanpur Campus
+
 - synonym: Registrar
   examples: |
     - Joint Registrar
@@ -239,7 +323,6 @@ nlu:
     - bye bye
     - see you later
     - bbye
-
 
 - intent: thanks
   examples: |
@@ -349,6 +432,7 @@ nlu:
     - What are the courses availible for an [IMS]]{"entity": "programme", "value": "UG"} degree?
     - What are the courses availible for an [IMT]{"entity": "programme", "value": "UG"} degree?
     - What are the courses availible for a [M.Sc]{"entity": "programme", "value": "UG"} degree?
+    - What are the courses availible for a [UG]{"entity": "programme", "value": "UG"} degree?
     - Course Structure for [Bachelor's]{"entity": "programme", "value": "UG"} degree
     - Course Structure for a [B.Tech]{"entity": "programme", "value": "UG"} degree
     - Course Structure for [B.Arch]{"entity": "programme", "value": "UG"} degree
@@ -357,8 +441,8 @@ nlu:
     - Course Structure for an [IMS]{"entity": "programme", "value": "UG"} degree
     - Course Structure for an [IMT]{"entity": "programme", "value": "UG"} degree
     - Course Structure for a [M.Sc]{"entity": "programme", "value": "UG"} degree
+    - Course Structure for a [UG]{"entity": "programme", "value": "UG"} degree
 
-  
 - intent: course_pg
   examples: |
     - What are the courses availible for [Master's]{"entity": "programme", "value": "PG"} degree?
@@ -368,6 +452,7 @@ nlu:
     - What are the courses availible for a [P.G. Diploma]{"entity": "programme", "value": "PG"}?
     - What are the courses availible for an [MBA]{"entity": "programme", "value": "PG"} degree?
     - What are the courses availible for a [Ph.D]{"entity": "programme", "value": "PG"} degree?
+    - What are the courses availible for a [PG]{"entity": "programme", "value": "PG"} degree?
     - What are the courses availible for [Doctor of Philosophy]{"entity": "programme", "value": "PG"}?
     - Course Structure for [Master's]{"entity": "programme", "value": "PG"} degree
     - Course Structure for a [M.Tech]{"entity": "programme", "value": "PG"} degree
@@ -376,14 +461,14 @@ nlu:
     - Course Structure for a [P.G. Diploma]{"entity": "programme", "value": "PG"}
     - Course Structure for an [MBA]{"entity": "programme", "value": "PG"} degree
     - Course Structure for a [Ph.D]{"entity": "programme", "value": "PG"} degree
+    - Course Structure for a [PG]{"entity": "programme", "value": "PG"} degree
     - Course Structure for [Doctor of Philosophy]{"entity": "programme", "value": "PG"}
-
 
 - intent: programme
   examples: |
     - Number of [UG]{"entity": "programme", "value": "UG"} degrees available?
     - Number of [PG]{"entity": "programme",  "value": "PG"} degrees available?
-    - Can I get a [UG]{"entity": "programme",  "value": "PHD"} degree?
+    - Can I get a [UG]{"entity": "programme",  "value": "UG"} degree?
     - Can I get a [PG]{"entity": "programme",  "value": "PG"} degree?
     - Can I do a [PHD]{"entity": "programme",  "value": "PHD"}?
     - How to apply for [UG]{"entity": "programme",  "value": "UG"}?
@@ -394,11 +479,135 @@ nlu:
   examples: |
     - What are the departments available?
     - Number of departments available?
-    - Is [CSE]{"entity": "department_name"} department there?
-    - B.Tech in [CSE]{"entity": "department_name"} department
-    - Is [ECE]{"entity": "department_name"} department there?
-    - B.Tech in [ECE]{"entity": "department_name"} department
-    - Is [CH]{"entity": "department_name"} department there?
+    - Is [CSE]{"entity": "department_name", "value": "CSE"} department there?
+    - Is [Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} department there?
+    - Is [CS]{"entity": "department_name", "value": "CSE"} department there?
+    - Is [ECE]{"entity": "department_name", "value": "ECE"} department there?
+    - Is [Electronics and Communication Engineering]{"entity": "department_name", "value": "ECE"} department there?
+    - Is [Electronics]{"entity": "department_name", "value": "ECE"} department there?
+    - Is [EE]{"entity": "department_name", "value": "EE"} department there?
+    - Is [Electrical Engineering]{"entity": "department_name", "value": "EE"} department there?
+    - Is [Electrical]{"entity": "department_name", "value": "EE"} department there?
+    - Is [CE]{"entity": "department_name", "value": "CE"} department there?
+    - Is [Civil Engineering]{"entity": "department_name", "value": "CE"} department there?
+    - Is [Civil]{"entity": "department_name", "value": "CE"} department there?
+    - Is [Biotech]{"entity": "department_name", "value": "Biotech"} department there?
+    - Is [Biotechnology]{"entity": "department_name", "value": "Biotech"} department there?
+    - Is [CH]{"entity": "department_name", "value": "CH"} department there?
+    - Is [Chemical Engineering]{"entity": "department_name", "value": "CH"} department there?
+    - Is [Chemical]{"entity": "department_name", "value": "CH"} department there?
+    - Is [Arch]{"entity": "department_name", "value": "Arch"} department there?
+    - Is [Architecture]{"entity": "department_name", "value": "Arch"} department there?
+    - Is [Architecture and Planning]{"entity": "department_name", "value": "Arch"} department there?
+    - Is [ASE]{"entity": "department_name", "value": "ASE"} department there?
+    - Is [Applied Science and Enginnering]{"entity": "department_name", "value": "ASE"} department there?
+    - Is [AS]{"entity": "department_name", "value": "ASE"} department there?
+    - Is [Chem]{"entity": "department_name", "value": "Chem"} department there?
+    - Is [Chemistry]{"entity": "department_name", "value": "Chem"} department there?
+    - Is [Earth]{"entity": "department_name", "value": "Earth"} department there?
+    - Is [Earthquake Engineering]{"entity": "department_name", "value": "Earth"} department there?
+    - Is [Earthquake]{"entity": "department_name", "value": "Earth"} department there?
+    - Is [GT]{"entity": "department_name", "value": "EarthSci"} department there?
+    - Is [GPT]{"entity": "department_name", "value": "EarthSci"} department there?
+    - Is [Earth Sciences]{"entity": "department_name", "value": "EarthSci"} department there?
+    - Is [Geo tech]{"entity": "department_name", "value": "EarthSci"} department there?
+    - Is [Geo Physical tech]{"entity": "department_name", "value": "EarthSci"} department there?
+    - Is [HSS]{"entity": "department_name", "value": "HSS"} department there?
+    - Is [Humanities]{"entity": "department_name", "value": "HSS"} department there?
+    - Is [Humanities and Social Sciences]{"entity": "department_name", "value": "HSS"} department there?
+    - Is [Social Sciences]{"entity": "department_name", "value": "HSS"} department there?
+    - Is [Hydro]{"entity": "department_name", "value": "Hydro"} department there?
+    - Is [Hydrology]{"entity": "department_name", "value": "Hydro"} department there?
+    - Is [HRE]{"entity": "department_name", "value": "HRE"} department there?
+    - Is [Renewable Energy]{"entity": "department_name", "value": "HRE"} department there?
+    - Is [Hydro and Renewable Energy]{"entity": "department_name", "value": "HRE"} department there?
+    - Is [Management]{"entity": "department_name", "value": "Management"} department there?
+    - Is [Management Studies]{"entity": "department_name", "value": "Management"} there?
+    - Is [Mathematics]{"entity": "department_name", "value": "Maths"} department there?
+    - Is [Maths]{"entity": "department_name", "value": "Maths"} department there?
+    - Is [Math]{"entity": "department_name", "value": "Maths"} department there?
+    - Is [MSM]{"entity": "department_name", "value": "Maths"} department there?
+    - Is [MIE]{"entity": "department_name", "value": "MIE"} department there?
+    - Is [Industrial]{"entity": "department_name", "value": "MIE"} department there?
+    - Is [Mechanical and Industrial Engineering]{"entity": "department_name", "value": "MIE"} department there?
+    - Is [Mechanical]{"entity": "department_name", "value": "MIE"} department there?
+    - Is [Mech]{"entity": "department_name", "value": "MIE"} department there?
+    - Is [MME]{"entity": "department_name", "value": "MME"} department there?
+    - Is [Meta]{"entity": "department_name", "value": "MME"} department there?
+    - Is [Metallurgical and Materials Engineering]{"entity": "department_name", "value": "MME"} department there?
+    - Is [Paper Tech]{"entity": "department_name", "value": "Paper"} department there?
+    - Is [Poly]{"entity": "department_name", "value": "Poly"} department there?
+    - Is [Polymer and Process Engineering]{"entity": "department_name", "value": "Poly"} department there?
+    - Is [Polymer Science]{"entity": "department_name", "value": "Poly"} department there?
+    - Is [Physics]{"entity": "department_name", "value": "Physics"} department there?
+    - Is [Phy]{"entity": "department_name", "value": "Physics"} department there?
+    - Is [Water]{"entity": "department_name", "value": "Water"} department there?
+    - Is [Water Resources Development and Management]{"entity": "department_name", "value": "Water"} department there?
+    - B.Tech in [CSE]{"entity": "department_name", "value": "CSE"} department 
+    - B.Tech in [Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} department 
+    - B.Tech in [CS]{"entity": "department_name", "value": "CSE"} department 
+    - B.Tech in [ECE]{"entity": "department_name", "value": "ECE"} department 
+    - B.Tech in [Electronics and Communication Engineering]{"entity": "department_name", "value": "ECE"} department 
+    - B.Tech in [Electronics]{"entity": "department_name", "value": "ECE"} department 
+    - B.Tech in [EE]{"entity": "department_name", "value": "EE"} department 
+    - B.Tech in [Electrical Engineering]{"entity": "department_name", "value": "EE"} department 
+    - B.Tech in [Electrical]{"entity": "department_name", "value": "EE"} department 
+    - B.Tech in [CE]{"entity": "department_name", "value": "CE"} department 
+    - B.Tech in [Civil Engineering]{"entity": "department_name", "value": "CE"} department 
+    - B.Tech in [Civil]{"entity": "department_name", "value": "CE"} department 
+    - B.Tech in [Biotech]{"entity": "department_name", "value": "Biotech"} department 
+    - B.Tech in [Biotechnology]{"entity": "department_name", "value": "Biotech"} department 
+    - B.Tech in [CH]{"entity": "department_name", "value": "CH"} department 
+    - B.Tech in [Chemical Engineering]{"entity": "department_name", "value": "CH"} department 
+    - B.Tech in [Chemical]{"entity": "department_name", "value": "CH"} department 
+    - B.Tech in [Arch]{"entity": "department_name", "value": "Arch"} department 
+    - B.Tech in [Architecture]{"entity": "department_name", "value": "Arch"} department 
+    - B.Tech in [Architecture and Planning]{"entity": "department_name", "value": "Arch"} department 
+    - B.Tech in [ASE]{"entity": "department_name", "value": "ASE"} department 
+    - B.Tech in [Applied Science and Enginnering]{"entity": "department_name", "value": "ASE"} department 
+    - B.Tech in [AS]{"entity": "department_name", "value": "ASE"} department 
+    - B.Tech in [Chem]{"entity": "department_name", "value": "Chem"} department 
+    - B.Tech in [Chemistry]{"entity": "department_name", "value": "Chem"} department 
+    - B.Tech in [Earth]{"entity": "department_name", "value": "Earth"} department 
+    - B.Tech in [Earthquake Engineering]{"entity": "department_name", "value": "Earth"} department 
+    - B.Tech in [Earthquake]{"entity": "department_name", "value": "Earth"} department 
+    - B.Tech in [GT]{"entity": "department_name", "value": "EarthSci"} department 
+    - B.Tech in [GPT]{"entity": "department_name", "value": "EarthSci"} department 
+    - B.Tech in [Earth Sciences]{"entity": "department_name", "value": "EarthSci"} department 
+    - B.Tech in [Geo tech]{"entity": "department_name", "value": "EarthSci"} department 
+    - B.Tech in [Geo Physical tech]{"entity": "department_name", "value": "EarthSci"} department 
+    - B.Tech in [HSS]{"entity": "department_name", "value": "HSS"} department 
+    - B.Tech in [Humanities]{"entity": "department_name", "value": "HSS"} department 
+    - B.Tech in [Humanities and Social Sciences]{"entity": "department_name", "value": "HSS"} department 
+    - B.Tech in [Social Sciences]{"entity": "department_name", "value": "HSS"} department 
+    - B.Tech in [Hydro]{"entity": "department_name", "value": "Hydro"} department 
+    - B.Tech in [Hydrology]{"entity": "department_name", "value": "Hydro"} department 
+    - B.Tech in [HRE]{"entity": "department_name", "value": "HRE"} department 
+    - B.Tech in [Renewable Energy]{"entity": "department_name", "value": "HRE"} department 
+    - B.Tech in [Hydro and Renewable Energy]{"entity": "department_name", "value": "HRE"} department 
+    - B.Tech in [Management]{"entity": "department_name", "value": "Management"} department 
+    - B.Tech in [Management Studies]{"entity": "department_name", "value": "Management"} 
+    - B.Tech in [Mathematics]{"entity": "department_name", "value": "Maths"} department 
+    - B.Tech in [Maths]{"entity": "department_name", "value": "Maths"} department 
+    - B.Tech in [Math]{"entity": "department_name", "value": "Maths"} department 
+    - B.Tech in [MSM]{"entity": "department_name", "value": "Maths"} department 
+    - B.Tech in [MIE]{"entity": "department_name", "value": "MIE"} department 
+    - B.Tech in [Industrial]{"entity": "department_name", "value": "MIE"} department 
+    - B.Tech in [Mechanical and Industrial Engineering]{"entity": "department_name", "value": "MIE"} department 
+    - B.Tech in [Mechanical]{"entity": "department_name", "value": "MIE"} department 
+    - B.Tech in [Mech]{"entity": "department_name", "value": "MIE"} department 
+    - B.Tech in [MME]{"entity": "department_name", "value": "MME"} department 
+    - B.Tech in [Meta]{"entity": "department_name", "value": "MME"} department 
+    - B.Tech in [Metallurgical and Materials Engineering]{"entity": "department_name", "value": "MME"} department 
+    - B.Tech in [Paper Tech]{"entity": "department_name", "value": "Paper"} department 
+    - B.Tech in [Poly]{"entity": "department_name", "value": "Poly"} department 
+    - B.Tech in [Polymer and Process Engineering]{"entity": "department_name", "value": "Poly"} department 
+    - B.Tech in [Polymer Science]{"entity": "department_name", "value": "Poly"} department 
+    - B.Tech in [Physics]{"entity": "department_name", "value": "Physics"} department 
+    - B.Tech in [Phy]{"entity": "department_name", "value": "Physics"} department 
+    - B.Tech in [Water]{"entity": "department_name", "value": "Water"} department 
+    - B.Tech in [Water Resources Development and Management]{"entity": "department_name", "value": "Water"} department 
+    
 
 - intent: RTI
   examples: |
@@ -421,6 +630,196 @@ nlu:
     - How to file a request under Right to Information Act?
     - For which information can I file request under Right to Information Act?
     - Procedure for filing request under Right to Information Act?
+
+- intent: acad_cal
+  examples: |
+    - What is the schedule of the classes for the semester?
+    - What is the schedule of the classes for Autumn Semester?
+    - What is the schedule of the classes for Autumn Sem?
+    - What is the schedule of the classes for Spring Semester?
+    - What is the schedule of the classes for Spring Sem?
+    - Academic Calendar for UG
+    - Academic Calendar for PG
+    - Academic Calendar for PHD
+    - Show me the academic calendar for the semester
+    - Show me the academic calendar for Autumn Semester
+    - Show me the academic calendar for Autumn Sem
+    - Show me the academic calendar for Spring Semester
+    - Show me the academic calendar for Spring Sem
+    - Acad Calendar for UG
+    - Acad Calendar for PG
+    - Acad Calendar for PHD
+    - Show me the acad calendar for the semester
+    - Show me the acad calendar for Autumn Semester
+    - Show me the acad calendar for Autumn Sem
+    - Show me the acad calendar for Spring Semester
+    - Show me the acad calendar for Spring Sem
+
+- intent: fee
+  examples: |
+    - What is the fee at IIT Roorkee?
+    - What is the fee?
+    - What is the fee structure?
+    - How do I pay my fee?
+    - How to pay the fee?
+    - How to make the fee payment?
+    - Pay fee online
+    - How to make online fee payment at IITR?
+    - How to make online fee payment?
+
+- intent: centers
+  examples: |
+    - What are the centers present at IIT Roorkee?
+    - What are the centers present at IITR?
+    - How many centers present at IITR?
+    - How many centers present at IIT Roorkee?
+    - What are the types of academic centers are present at IITR?
+    - Which technical centers are present at IITR?
+    - Where is [ICC]{"entity":"center_name", "value": "ICC"}?
+    - What are the centres present at IIT Roorkee?
+    - What are the centres present at IITR?
+    - How many centres present at IITR?
+    - How many centres present at IIT Roorkee?
+    - What are the types of academic centres are present at IITR?
+    - Which technical centres are present at IITR?
+    - Where is the [ICC]{"entity":"center_name", "value": "ICC"} located?
+    - Where is the [Institute Computer Centre]{"entity":"center_name", "value": "ICC"} located?
+    - What is the [ICC]{"entity":"center_name", "value": "ICC"}?
+    - What is the [Institute Computer Centre]{"entity":"center_name", "value": "ICC"}?    
+    - Where is the [ICC]{"entity":"center_name", "value": "ICC"}?
+    - Where is the [Institute Computer Centre]{"entity":"center_name", "value": "ICC"}?
+    - Where is the [Centre of Nanotechnology]{"entity":"center_name", "value": "CoN"} located?
+    - Where is the [Nanotechnology Centre]{"entity":"center_name", "value": "CoN"} located?
+    - What is the [Centre of Nanotechnology]{"entity":"center_name", "value": "CoN"}?
+    - What is the [Nanotechnology Centre]{"entity":"center_name", "value": "CoN"}?    
+    - Where is the [Centre of Nanotechnology]{"entity":"center_name", "value": "CoN"}?
+    - Where is the [Nanotechnology Centre]{"entity":"center_name", "value": "CoN"}?
+    - Where is the [Noida Centre]{"entity":"center_name", "value": "NoidaCentre"} located?
+    - Where is the [Greater Noida Extension Centre IITR]{"entity":"center_name", "value": "NoidaCentre"} located?
+    - What is the [Noida Centre]{"entity":"center_name", "value": "NoidaCentre"}?
+    - What is the [Greater Noida Extension Centre IITR]{"entity":"center_name", "value": "NoidaCentre"}?    
+    - Where is the [Noida Centre]{"entity":"center_name", "value": "NoidaCentre"}?
+    - Where is the [Greater Noida Extension Centre IITR]{"entity":"center_name", "value": "NoidaCentre"}?
+    - Where is the [Centre of Excellence]{"entity":"center_name", "value": "CoE"} located?
+    - Where is the [Excellence Centre]{"entity":"center_name", "value": "CoE"} located?
+    - What is the [Centre of Excellence]{"entity":"center_name", "value": "CoE"}?
+    - What is the [Excellence Centre]{"entity":"center_name", "value": "CoE"}?    
+    - Where is the [Centre of Excellence]{"entity":"center_name", "value": "CoE"}?
+    - Where is the [Excellence Centre]{"entity":"center_name", "value": "CoE"}?
+    - Where is the [CoEDMM]{"entity":"center_name", "value": "CoEDMM"} located?
+    - Where is the [Centre of Excellence in Disaster Mitigation & Management]{"entity":"center_name", "value": "CoEDMM"} located?
+    - What is the [CoEDMM]{"entity":"center_name", "value": "CoEDMM"}?
+    - What is the [Centre of Excellence in Disaster Mitigation & Management]{"entity":"center_name", "value": "CoEDMM"}?    
+    - Where is the [CoEDMM]{"entity":"center_name", "value": "CoEDMM"}?
+    - Where is the [Centre of Excellence in Disaster Mitigation & Management]{"entity":"center_name", "value": "CoEDMM"}?
+    - Where is the [CTRANS]{"entity":"center_name", "value": "CTRANS"} located?
+    - Where is the [Transportation Centre]{"entity":"center_name", "value": "CTRANS"} located?
+    - Where is the [Centre for Transportation Systems]{"entity":"center_name", "value": "CTRANS"} located?
+    - What is the [CTRANS]{"entity":"center_name", "value": "CTRANS"}?
+    - What is the [Transportation Centre]{"entity":"center_name", "value": "CTRANS"}?
+    - What is the [Centre for Transportation Systems]{"entity":"center_name", "value": "CTRANS"}?    
+    - Where is the [CTRANS]{"entity":"center_name", "value": "CTRANS"}?    
+    - Where is the [Centre for Transportation Systems]{"entity":"center_name", "value": "CTRANS"}?
+    - Where is the [Transportation Centre]{"entity":"center_name", "value": "CTRANS"}?
+    - Where is the [CEC]{"entity":"center_name", "value": "CEC"} located?
+    - Where is the [Continuing Education Centre]{"entity":"center_name", "value": "CEC"} located?
+    - Where is the [Education Centre]{"entity":"center_name", "value": "CEC"} located?
+    - What is the [CEC]{"entity":"center_name", "value": "CEC"}?
+    - What is the [Continuing Education Centre]{"entity":"center_name", "value": "CEC"}?
+    - What is the [Education Centre]{"entity":"center_name", "value": "CEC"}?    
+    - Where is the [CEC]{"entity":"center_name", "value": "CEC"}?    
+    - Where is the [Continuing Education Centre]{"entity":"center_name", "value": "CEC"}?
+    - Where is the [Education Centre]{"entity":"center_name", "value": "CEC"}?
+    - Where is the [Design Centre]{"entity":"center_name", "value": "DIC"} located?
+    - Where is the [Design Innovation Centre]{"entity":"center_name", "value": "DIC"} located?
+    - Where is the [Innovation Centre]{"entity":"center_name", "value": "DIC"} located?
+    - What is the [Design Centre]{"entity":"center_name", "value": "DIC"}?
+    - What is the [Design Innovation Centre]{"entity":"center_name", "value": "DIC"}?
+    - What is the [Innovation Centre]{"entity":"center_name", "value": "DIC"}?    
+    - Where is the [Design Centre]{"entity":"center_name", "value": "DIC"}?    
+    - Where is the [Design Innovation Centre]{"entity":"center_name", "value": "DIC"}?
+    - Where is the [Innovation Centre]{"entity":"center_name", "value": "DIC"}?
+    - Where is the [E-Learning Center]{"entity":"center_name", "value": "EC"} located?
+    - Where is the [E Learning Center]{"entity":"center_name", "value": "EC"} located?
+    - What is the [E-Learning Center]{"entity":"center_name", "value": "EC"}?
+    - What is the [E Learning Center]{"entity":"center_name", "value": "EC"}?    
+    - Where is the [E-Learning Center]{"entity":"center_name", "value": "EC"}?
+    - Where is the [E Learning Center]{"entity":"center_name", "value": "EC"}?
+    - Where is the [IIC]{"entity":"center_name", "value": "IIC"} located?
+    - Where is the [Institute Instrumentation Centre]{"entity":"center_name", "value": "IIC"} located?
+    - What is the [IIC]{"entity":"center_name", "value": "IIC"}?
+    - What is the [Institute Instrumentation Centre]{"entity":"center_name", "value": "IIC"}?    
+    - Where is the [IIC]{"entity":"center_name", "value": "IIC"}?
+    - Where is the [Institute Instrumentation Centre]{"entity":"center_name", "value": "IIC"}?
+    - Where is the [MGCL]{"entity":"center_name", "value": "MGCL"} located?
+    - Where is the [Mahatma Gandhi Central Library]{"entity":"center_name", "value": "MGCL"} located?
+    - Where is the [Library]{"entity":"center_name", "value": "MGCL"} located?
+    - What is the [MGCL]{"entity":"center_name", "value": "MGCL"}?
+    - What is the [Mahatma Gandhi Central Library]{"entity":"center_name", "value": "MGCL"}?
+    - What is the [Library]{"entity":"center_name", "value": "MGCL"}?    
+    - Where is the [MGCL]{"entity":"center_name", "value": "MGCL"}?    
+    - Where is the [Mahatma Gandhi Central Library]{"entity":"center_name", "value": "MGCL"}?
+    - Where is the [Library]{"entity":"center_name", "value": "MGCL"}?
+    - Where is the [Tinkering Lab]{"entity":"center_name", "value": "TL"} located?
+    - Where is the [Tinkering Labs]{"entity":"center_name", "value": "TL"} located?
+    - What is the [Tinkering Lab]{"entity":"center_name", "value": "TL"}?
+    - What is the [Tinkering Labs]{"entity":"center_name", "value": "TL"}?    
+    - Where is the [Tinkering Lab]{"entity":"center_name", "value": "TL"}?
+    - Where is the [Tinkering Labs]{"entity":"center_name", "value": "TL"}?
+    - Where is the [TIDES]{"entity":"center_name", "value": "TIDES"} located?
+    - Where is the [TIDES Incubation Centre]{"entity":"center_name", "value": "TIDES"} located?
+    - What is the [TIDES]{"entity":"center_name", "value": "TIDES"}?
+    - What is the [TIDES Incubation Centre]{"entity":"center_name", "value": "TIDES"}?    
+    - Where is the [TIDES]{"entity":"center_name", "value": "TIDES"}?
+    - Where is the [TIDES Incubation Centre]{"entity":"center_name", "value": "TIDES"}?
+    - Where is the [Institute Hospital]{"entity":"center_name", "value": "Hospital"} located?
+    - Where is the [Hospital]{"entity":"center_name", "value": "Hospital"} located?
+    - What is the [Institute Hospital]{"entity":"center_name", "value": "Hospital"}?
+    - What is the [Hospital]{"entity":"center_name", "value": "Hospital"}?    
+    - Where is the [Institute Hospital]{"entity":"center_name", "value": "Hospital"}?
+    - Where is the [Institute Hospital]{"entity":"center_name", "value": "Hospital"}?
+    - Where is the [IPRC]{"entity":"center_name", "value": "IPRC"} located?
+    - Where is the [Intellectual Property Rights Cell]{"entity":"center_name", "value": "IPRC"} located?
+    - What is the [IPRC]{"entity":"center_name", "value": "IPRC"}?
+    - What is the [Intellectual Property Rights Cell]{"entity":"center_name", "value": "IPRC"}?    
+    - Where is the [Intellectual Property Rights Cell]{"entity":"center_name", "value": "IPRC"}?
+    - Where is the [IPRC]{"entity":"center_name", "value": "IPRC"}?
+    - Where is the [Water for Farewell]{"entity":"center_name", "value": "WFF"} located?
+    - What is the [Water for Farewell]{"entity":"center_name", "value": "WFF"}?    
+    - Where is the [Water for Farewell]{"entity":"center_name", "value": "WFF"}?
+
+- intent: minors_honors
+  examples: |
+    - What are the minors provided by the various departments?
+    - What are the minors available?
+    - I want to take up a minor
+    - I want to enrol for a minor specialization
+    - I want to enrol for a minor
+    - I want to take up a minor specialization
+    - How can I enroll for a minor specialization?
+    - How can I enrol for a minor?
+    - What are the honors available at IITR?
+    - What are the honours available at IITR?
+    - What kinds of honors are available?
+    - How can I enrol for an honour course?
+    - How can I enroll for an honour?
+    - How can I enrol for an honour course?
+    - I want to take up an honor course
+    - I want to enrol for an honour course
+    - I want to take up an honor
+    - I want to enrol for an honour
+
+- intent: branch_change
+  examples: |
+    - What is the procedure for branch change at IITR?
+    - What is the procedure for changing my branch at IITR?
+    - How to change my branch at IITR?
+    - What is the procedure for branch change?
+    - What is the procedure for changing my branch?
+    - How to change my branch?
+    - I want to change my branch.
+    - Is it difficult to change my branch at IITR?
+
 
 - intent: research
   examples: |
