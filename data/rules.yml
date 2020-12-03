@@ -102,3 +102,8 @@ rules:
   steps:
   - intent: scholarships
   - action: utter_scholarships
+
+- rule: Answer Recruitments related queries
+  steps:
+  - intent: recruitments
+  - action: utter_recruitments

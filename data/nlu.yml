@@ -269,22 +269,17 @@ nlu:
     - Infrastructure
     - International Relations
     - Saharanpur Campus
-
 - synonym: Registrar
   examples: |
     - Joint Registrar
     - Asstt. Registrar
     - Dy. Registrar
     - PIO
-    - Finance & Accounts
-    - Faculty Affairs
     - Academics
     - Internal Audit
-    - Administration
     - Material Management
     - Non-Teaching Group A,B,C
     - Faculty Recruitment 
-    - Saharanpur Campus
 
 - synonym: Officer
   examples: |
@@ -841,6 +836,7 @@ nlu:
     - Important Lists
     - where is Claim Form?
     - what is Criteria for Fee Waiver and MCM?
+    - Info about the MCM scholarship
     - what is Awards/Medals/ Scholarships available to IITR Students?
 
 - intent: recruitments
@@ -873,8 +869,8 @@ nlu:
     - who is the [DOAA]{"entity": "admin_name", "value": "Dean"}?
     - who is the [DOSW]{"entity": "admin_name", "value": "Dean"}?
     - who is the [ADOAA]{"entity": "admin_name", "value": "Dean"}?
-    - who is the [ADOAA(Curriculum)]{"entity": "admin_name", "value": "Dean"}?
-    - the [ADOAA(Evaluation)]{"entity": "admin_name", "value": "Dean"}?
+    - who is the [Curriculum]{"entity": "admin_name", "value": "Dean"}?
+    - the [Evaluation]{"entity": "admin_name", "value": "Dean"}?
     - the dean of [Administration]{"entity": "admin_name", "value": "Dean"}?
     - the dean of [Acads]{"entity": "admin_name", "value": "Dean"}?
     - the dean of [Resources and Alumni Affairs]{"entity": "admin_name", "value": "Dean"}?
@@ -901,15 +897,15 @@ nlu:
     - who is the [Asstt. Registrar]{"entity": "admin_name", "value": "Registrar"}?
     - who is the [Dy. Registrar]{"entity": "admin_name", "value": "Registrar"}?
     - who is the [PIO]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar [Finance & Accounts]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar [Faculty Affairs]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Finance & Accounts]{"entity": "admin_name", "value": "Dean"}?
+    - who is the registrar [Faculty Affairs]{"entity": "admin_name", "value": "Dean"}?
     - who is the registrar [Academics]{"entity": "admin_name", "value": "Registrar"}?
     - who is the registrar [Internal Audit]{"entity": "admin_name", "value": "Registrar"}?
-    - who is the registrar [Administration]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Administration]{"entity": "admin_name", "value": "Dean"}?
     - who is the registrar [Material Management]{"entity": "admin_name", "value": "Registrar"}?
     - who is the registrar [Non-Teaching Group A,B,C]{"entity": "admin_name", "value": "Registrar"}?
     - who is the registrar [Faculty Recruitment]{"entity": "admin_name", "value": "Registrar"}? 
-    - who is the registrar [Saharanpur Campus]{"entity": "admin_name", "value": "Registrar"}?
+    - who is the registrar [Saharanpur Campus]{"entity": "admin_name", "value": "Dean"}?
     - who is the officer [Institute Engineer]{"entity": "admin_name", "value": "Officer"}?
     - who is the officer [Institute Architect]{"entity": "admin_name", "value": "Officer"}?
     - who is the officer [Sports Officer]{"entity": "admin_name", "value": "Officer"}?
