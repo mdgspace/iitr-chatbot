@@ -73,7 +73,7 @@ class ActionFaculty(Action):
         return []
 
 class ActionAdministration(Action):
-
+    
     def name(self) -> Text:
         return "action_administration"
 
@@ -86,3 +86,17 @@ class ActionAdministration(Action):
 
         return []
 
+class ActionCenter(Action):
+    
+    def name(self) -> Text:
+        return "action_center"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        center = tracker.slots.get("center_name")
+        output = "The information about the {} can be found at the following link: {}".format(center,center)
+        dispatcher.utter_message(text=output)
+
+        return []

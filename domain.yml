@@ -15,8 +15,7 @@ intents:
   - centers
   - departments
   - branch_change
-  - minors
-  - honors
+  - minors_honors
   - RTI
   - Right to Information Act
   - administration
@@ -28,11 +27,13 @@ actions:
   - action_show_department_info
   - action_programme
   - action_faculty
+  - action_center
   - action_administration 
 
 entities:
   - programme
   - department_name
+  - center_name
   - admin_name
 
 slots:
@@ -42,6 +43,10 @@ slots:
   department_name:
     type: text
     auto_fill: True
+  center_name:
+    type: text
+    auto_fill: True
+  
   admin_name:
     type: text
     auto_fill: True
@@ -63,7 +68,7 @@ responses:
   - text: "Bye, see you at IITR!"
 
   utter_admissions:
-  - text: "IITR admits students through JEE Advanced for B.Tech and for B.Arch look up!"
+  - text: "IITR admits students through JEE Advanced for B.Tech and for B.Arch through JEE Main followed by JEE Advanced and AAT."
 
   utter_faculty:
   - text: "The information about the faculty can be found at the following link:"
@@ -77,6 +82,17 @@ responses:
   utter_RTI:
   - text: "You can find more information about RTI process at https://www.iitr.ac.in/Main/pages/_en_Right_To_Information__en_.html"
 
+  utter_acad_cal:
+  - text: "You can find the academic calendar for all the programmes here: https://www.iitr.ac.in/academics/pages/Academic_Calendar.html"
+
+  utter_fee:
+  - text: "Please find the fee structure here: https://www.iitr.ac.in/academics/pages/Fee_Structure.html.\nFor online Fee Payments please refer to: https://www.iitr.ac.in/academics/pages/ONLINE_FEE_SUBMISSION.html"
+
+  utter_minors_honors:
+  - text: "Please find the information about the Minor Specializations and Departmental Honours here: https://www.iitr.ac.in/academics/pages/Programmes.html"
+
+  utter_branch_change:
+  - text: "Please refer to the following blog for information on branch change: http://watchout.iitr.ac.in/2019/08/branch-change"
   utter_administration:
   - text: "Hope this helped!"
 
