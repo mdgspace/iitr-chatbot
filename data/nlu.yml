@@ -157,6 +157,58 @@ nlu:
     - Doctor of Philosophy?
     - PG
 
+- synonym: Director
+  examples: |
+    - director
+    - dy. director
+    - deputy director
+    - head
+    - captain
+    - chief
+    - head of the institute
+- synonym: Dean
+  examples: |
+    - dean
+    - Administration
+    - DORA
+    - Resources and Alumni Affairs
+    - Finance & Planning
+    - Faculty Affairs
+    - Academic Affairs
+    - Acads
+    - DOAA
+    - ADOAA
+    - ADOAA(Curriculum)
+    - ADOAA(Evaluation)
+    - Sponsored Research & Industrial Consultancy
+    - Students' Welfare
+    - DOSW
+    - Infrastructure
+    - International Relations
+    - Saharanpur Campus
+- synonym: Registrar
+  examples: |
+    - Joint Registrar
+    - Asstt. Registrar
+    - Dy. Registrar
+    - PIO
+    - Finance & Accounts
+    - Faculty Affairs
+    - Academics
+    - Internal Audit
+    - Administration
+    - Material Management
+    - Non-Teaching Group A,B,C
+    - Faculty Recruitment 
+    - Saharanpur Campus
+
+- synonym: Officer
+  examples: |
+    - Institute Engineer
+    - Institute Architect	
+    - Sports Officer
+    - Security Officer
+
 - intent: greet
   examples: |
     - hey
@@ -369,3 +421,64 @@ nlu:
     - How to file a request under Right to Information Act?
     - For which information can I file request under Right to Information Act?
     - Procedure for filing request under Right to Information Act?
+
+- intent: administration
+  examples: |
+    - who is the [Dean]{"entity": "admin_name", "value": "Dean"}?
+    - who is the [dean]{"entity": "admin_name", "value": "Dean"}
+    - who is the [Director]{"entity": "admin_name", "value": "Director"}
+    - who is the [dy. director]{"entity": "admin_name", "value": "Director"}
+    - who is the [deputy director]{"entity": "admin_name", "value": "Director"}
+    - who is the [head]{"entity": "admin_name", "value": "Director"}
+    - who is the [captain]{"entity": "admin_name", "value": "Director"}
+    - who is the [chief]{"entity": "admin_name", "value": "Director"}
+    - who is the [head of the institute]{"entity": "admin_name", "value": "Director"}
+    - who is the [Registrar]{"entity": "admin_name", "value": "Registrar"}
+    - who is the [Officer]{"entity": "admin_name", "value": "Officer"}
+    - who is the [DORA]{"entity": "admin_name", "value": "Dean"}
+    - who is the [DOAA]{"entity": "admin_name", "value": "Dean"}
+    - who is the [DOSW]{"entity": "admin_name", "value": "Dean"}
+    - who is the [ADOAA]{"entity": "admin_name", "value": "Dean"}
+    - who is the [ADOAA(Curriculum)]{"entity": "admin_name", "value": "Dean"}
+    - the [ADOAA(Evaluation)]{"entity": "admin_name", "value": "Dean"}
+    - the dean of [Administration]{"entity": "admin_name", "value": "Dean"}
+    - the dean of [Acads]{"entity": "admin_name", "value": "Dean"}
+    - the dean of [Resources and Alumni Affairs]{"entity": "admin_name", "value": "Dean"}
+    - the dean of [Finance & Planning]{"entity": "admin_name", "value": "Dean"}
+    - the dean of [Faculty Affairs]{"entity": "admin_name", "value": "Dean"}
+    - the dean of [Academic Affairs]{"entity": "admin_name", "value": "Dean"}
+    - dean of [Sponsored Research & Industrial Consultancy]{"entity": "admin_name", "value": "Dean"}
+    - dean of [Students' Welfare]{"entity": "admin_name", "value": "Dean"}
+    - dean of [Infrastructure]{"entity": "admin_name", "value": "Dean"}
+    - dean of [International Relations]{"entity": "admin_name", "value": "Dean"}
+    - dean of [Saharanpur Campus]{"entity": "admin_name", "value": "Dean"}
+    - [Dean]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Administration]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Resources and Alumni Affairs]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Finance & Planning]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Faculty Affairs]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Academic Affairs]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Sponsored Research & Industrial Consultancy]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Students' Welfare]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Infrastructure]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [International Relations]{"entity": "admin_name", "value": "Dean"}
+    - associate dean [Saharanpur Campus]{"entity": "admin_name", "value": "Dean"}
+    - who is the registrar[Joint Registrar]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Asstt. Registrar]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Dy. Registrar]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[PIO]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Finance & Accounts]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Faculty Affairs]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Academics]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Internal Audit]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Administration]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Material Management]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Non-Teaching Group A,B,C]{"entity": "admin_name", "value": "Registrar"}
+    - who is the registrar[Faculty Recruitment]{"entity": "admin_name", "value": "Registrar"} 
+    - who is the registrar[Saharanpur Campus]{"entity": "admin_name", "value": "Registrar"}
+    - who is the officer[Institute Engineer]{"entity": "admin_name", "value": "Officer"}
+    - who is the officer[Institute Architect]{"entity": "admin_name", "value": "Officer"}
+    - who is the officer[Sports Officer]{"entity": "admin_name", "value": "Officer"}
+    - who is the officer[Security Officer]{"entity": "admin_name", "value": "Officer"}
+
+    

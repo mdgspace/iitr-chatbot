@@ -63,3 +63,11 @@ rules:
   steps:
   - intent: Right to Information Act 
   - action: utter_RTI
+
+- rule: Answer about Administration
+  steps:
+  - intent: administration
+    entities:
+    - admin_name: ["Dean", "Director", "Registrar", "Officer"]  
+  - action: action_administration
+  - action: utter_administration

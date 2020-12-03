@@ -19,15 +19,18 @@ intents:
   - honors
   - RTI
   - Right to Information Act
+  - administration
 
 actions:
   - action_show_department_info
   - action_programme
   - action_faculty
+  - action_administration 
 
 entities:
   - programme
   - department_name
+  - admin_name
 
 slots:
   programme:
@@ -36,7 +39,9 @@ slots:
   department_name:
     type: text
     auto_fill: True
-  
+  admin_name:
+    type: text
+    auto_fill: True
 
 responses:
   utter_greet:
@@ -69,6 +74,9 @@ responses:
   utter_RTI:
   - text: "You can find more information about RTI process at https://www.iitr.ac.in/Main/pages/_en_Right_To_Information__en_.html"
 
+  utter_administration:
+  - text: "Hope this helped!"
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
