@@ -18,17 +18,23 @@ intents:
   - minors_honors
   - RTI
   - Right to Information Act
+  - administration
+  - research
+  - scholarships
+  - recruitments
 
 actions:
   - action_show_department_info
   - action_programme
   - action_faculty
   - action_center
+  - action_administration 
 
 entities:
   - programme
   - department_name
   - center_name
+  - admin_name
 
 slots:
   programme:
@@ -41,6 +47,10 @@ slots:
     type: text
     auto_fill: True
   
+  admin_name:
+    type: text
+    auto_fill: True
+
 responses:
   utter_greet:
   - text: "Welcome to IITR! How may I help you?"
@@ -83,6 +93,17 @@ responses:
 
   utter_branch_change:
   - text: "Please refer to the following blog for information on branch change: http://watchout.iitr.ac.in/2019/08/branch-change"
+  utter_administration:
+  - text: "Hope this helped!"
+
+  utter_research:
+  - text: "Read about the SRIC and latest research done from our released R&D newsletters at: https://www.iitr.ac.in/sric/pages/R&DNewsLetter.html"
+
+  utter_scholarships:
+  - text: "All important information pertaining Institute scholarships are at : http://awards.iitr.ac.in/scholarship/scholarship.php"
+
+  utter_recruitments:
+  - text: "You can see list of all recruiters that come to IITR at https://www.iitr.ac.in/Placements/pages/index.html#pastrecruiters"
 
 session_config:
   session_expiration_time: 60

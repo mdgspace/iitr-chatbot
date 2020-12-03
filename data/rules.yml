@@ -85,3 +85,20 @@ rules:
     entities:
     - center_name: ["ICC","IIC", "TL", "IPRC", "WFF", "Hospital", "TIDES", "MGCL", "EC", "DIC", "CEC", "CTRANS", "CoEDMM", "COE", "NoidaCentre", "CoN"]
   - action: action_center
+- rule: Answer about Administration
+  steps:
+  - intent: administration
+    entities:
+    - admin_name: ["Dean", "Director", "Registrar", "Officer"]  
+  - action: action_administration
+  - action: utter_administration
+
+- rule: Answer Research related queries
+  steps:
+  - intent: research
+  - action: utter_research
+
+- rule: Answer Scholarships related queries
+  steps:
+  - intent: scholarships
+  - action: utter_scholarships
