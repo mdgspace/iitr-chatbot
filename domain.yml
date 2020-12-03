@@ -19,15 +19,21 @@ intents:
   - honors
   - RTI
   - Right to Information Act
+  - administration
+  - research
+  - scholarships
+  - recruitments
 
 actions:
   - action_show_department_info
   - action_programme
   - action_faculty
+  - action_administration 
 
 entities:
   - programme
   - department_name
+  - admin_name
 
 slots:
   programme:
@@ -36,7 +42,9 @@ slots:
   department_name:
     type: text
     auto_fill: True
-  
+  admin_name:
+    type: text
+    auto_fill: True
 
 responses:
   utter_greet:
@@ -68,6 +76,18 @@ responses:
 
   utter_RTI:
   - text: "You can find more information about RTI process at https://www.iitr.ac.in/Main/pages/_en_Right_To_Information__en_.html"
+
+  utter_administration:
+  - text: "Hope this helped!"
+
+  utter_research:
+  - text: "Read about the SRIC and latest research done from our released R&D newsletters at: https://www.iitr.ac.in/sric/pages/R&DNewsLetter.html"
+
+  utter_scholarships:
+  - text: "All important information pertaining Institute scholarships are at : http://awards.iitr.ac.in/scholarship/scholarship.php"
+
+  utter_recruitments:
+  - text: "You can see list of all recruiters that come to IITR at https://www.iitr.ac.in/Placements/pages/index.html#pastrecruiters"
 
 session_config:
   session_expiration_time: 60

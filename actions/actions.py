@@ -72,3 +72,17 @@ class ActionFaculty(Action):
 
         return []
 
+class ActionAdministration(Action):
+
+    def name(self) -> Text:
+        return "action_administration"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        admin = tracker.slots.get("admin_name")
+        output = "\nYou can find information about the {} at this link:{}".format(admin,"https://www.iitr.ac.in/administration/pages/Institute_Central_Administration.html")
+        dispatcher.utter_message(text=output)
+
+        return []
+
