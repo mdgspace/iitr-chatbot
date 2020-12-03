@@ -31,6 +31,10 @@ stories:
     - admin_name: ["Dean", "Director", "Registrar", "Officer"]
   - action: action_administration
   - action: utter_administration
+  - intent: research
+  - action: utter_research
+  - intent: scholarships
+  - action: utter_scholarships
   - intent: thanks
   - action: utter_thanks
   - intent: goodbye
