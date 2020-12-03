@@ -1,5 +1,8 @@
 # IITR chatbot with RASA
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Framework: RASA](https://img.shields.io/badge/Framework-RASA-purple.svg)](https://rasa.com/)
+
 ## Setup
 
 - Update **pip**
