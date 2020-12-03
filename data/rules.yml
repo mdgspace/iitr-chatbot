@@ -71,3 +71,13 @@ rules:
     - admin_name: ["Dean", "Director", "Registrar", "Officer"]  
   - action: action_administration
   - action: utter_administration
+
+- rule: Answer Research related queries
+  steps:
+  - intent: research
+  - action: utter_research
+
+- rule: Answer Scholarships related queries
+  steps:
+  - intent: scholarships
+  - action: utter_scholarships

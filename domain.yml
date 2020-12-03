@@ -20,6 +20,8 @@ intents:
   - RTI
   - Right to Information Act
   - administration
+  - research
+  - scholarships
 
 actions:
   - action_show_department_info
@@ -76,7 +78,13 @@ responses:
 
   utter_administration:
   - text: "Hope this helped!"
-  
+
+  utter_research:
+  - text: "Read about the SRIC and latest research done from our released R&D newsletters at: https://www.iitr.ac.in/sric/pages/R&DNewsLetter.html"
+
+  utter_scholarships:
+  - text: "All important information pertaining Institute scholarships are at : http://awards.iitr.ac.in/scholarship/scholarship.php"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
