@@ -287,6 +287,24 @@ nlu:
     - Institute Architect	
     - Sports Officer
     - Security Officer
+  
+- synonym: scheme
+  examples: |
+    - Naming Opportunity
+    - Chair Professorship for Faculty
+    - Research Fellowship for mid-career Faculty
+    - Fellowship for New Faculty
+    - James Thomason Scholarship
+    - Support for Students’ Technical Projects
+    - Travel Support to Students to present papers in Conferences
+    - Travel Support to Students for International Research Internships
+    - Departmental Endowed Lecture Series
+    - Financial Aid for Students
+    - Excellence in Doctoral Research Award
+    - Gold Medal to Departmental Topper
+    - Best B.Tech. Project of the Department Award
+    - Merit-Cum-Means Scholarship
+    - MCM
 
 - intent: greet
   examples: |
@@ -910,7 +928,130 @@ nlu:
     - who is the officer [Institute Architect]{"entity": "admin_name", "value": "Officer"}?
     - who is the officer [Sports Officer]{"entity": "admin_name", "value": "Officer"}?
     - who is the officer [Security Officer]{"entity": "admin_name", "value": "Officer"}?
+  
+- intent: top_donors
+  examples: |
+    - Who are the top donors?
+    - Who have donated the most?
+    - Who have contributed the most to donations?
+    - List of top donors of IITR?
+    - List of top donors?
+    - Top Donors of IITR?
 
+- intent: alumni_schemes
+  examples: |
+    - What are the schemes under which the alumni can donate?
+    - Schemes under which the alumni can donate?
+    - List of Schemes under which the alumni can donate?
+    - Schemes for donation under Alumni Affairs?
+    - Schemes for promoting excellence under donation?
+    - Schemes for donation for the alumni?
+    - Schemes for donation?
 
+- intent: alumni_mentor_students
+  examples: |
+    - How can the alumni mentor the students?
+    - How can the alumni get involved in mentoring the students?
+    - Procedure for applying under Student Alumni Mentorship Program?
+    - Procedure for applying under SAMP?
+    - How the alumni can help in mentoring the students?
 
-    
+- intent: alumni_avenues
+  examples: |
+    - What are the different avenues available for alumni?
+    - Avenues for Alumni?
+    - In what ways alumni can connect to the institute?
+    - Different Avenues for the alumni?
+    - Different ways for alumni to have a connection with the institute?
+    - How can alumni have a close bond with the institute?
+
+- intent: how_to_donate
+  examples: |
+    - How the alumni can donate to the schemes?
+    - How the alumni can donate?
+    - In what ways the alumni can donate?
+    - How to donate for the various schemes?
+    - How to donate for the [Naming Opportunity]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Chair Professorship for Faculty]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Research Fellowship for mid-career Faculty]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Fellowship for New Faculty]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [James Thomason Scholarship]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Support for Students’ Technical Projects]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Travel Support to Students to present papers in Conferences]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Travel Support to Students for International Research Internships]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Departmental Endowed Lecture Series]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Financial Aid for Students]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Excellence in Doctoral Research Award]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Gold Medal to Departmental Topper]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Best B.Tech. Project of the Department Award]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [Merit-Cum-Means Scholarship]{"entity": "scheme_name", "value": "scheme"} Scheme?
+    - How to donate for the [MCM]{"entity": "scheme_name", "value": "scheme"} Scheme?
+
+- intent: global_alumni_network
+  examples: |
+    - How to connect to the Global Network of IITR Alumni?
+    - What is Global Network of IITR Alumni?
+    - How to be a part of Global Network of IITR Alumni?
+    - How to join Global Network of IITR Alumni?
+    - What is criteria and procedure for joining Global Network of IITR Alumni?
+
+- intent: alumni_news_and_outreach
+  examples: |
+    - How to get the latest news about the IITR Alumni?
+    - Where to find the latest news related to IITR Alumni?
+    - News related to IITR Alumni?
+    - Latest News related to the IITR Alumni?
+    - Latest News about the IITR Alumni?
+
+- intent: alumni_awards
+  examples: |
+    - What are the various alumni awards?
+    - For which awards are the alumni eligible?
+    - Awards for the alumni?
+    - The alumni can apply for which awards?
+    - Which awards are applicable for the alumni?
+    - [Research Award]{"entity": "alumni_award_name", "value": "Research Award"}?
+    - [Distiguished Alumni Award]{"entity": "alumni_award_name", "value": "Distinguished Alumni Award"}?
+    - [Outstanding Service Award]{"entity": "alumni_award_name", "value": "Outstanding Service Award"}?
+    - [Ramkumar Prize]{"entity": "alumni_award_name", "value": "Ramkumar Prize"}?
+    - [Khosla National Award]{"entity": "alumni_award_name", "value": "Khosla National Award"}?
+    - [HRED River Ganga Rejuvenation Award]{"entity": "alumni_award_name", "value": "HRED River Ganga Rejuvenation Award"}?
+    - [HRED Hydro & Renewable Energy Award]{"entity": "alumni_award_name", "value": "HRED Hydro & Renewable Energy Award"}?
+    - [O. P. Jain Memorial Structural Design Award]{"entity": "alumni_award_name", "value": "O. P. Jain Memorial Structural Design Award"}?
+    - [A.S. Arya - IITR Disaster Prevention Award]{"entity": "alumni_award_name", "value": "A.S. Arya - IITR Disaster Prevention Award"}?
+    - [Gopal Ranjan Technology Award]{"entity": "alumni_award_name", "value": "Gopal Ranjan Technology Award"}?
+    - [Shamsher Prakash Technology Award]{"entity": "alumni_award_name", "value": "Shamsher Prakash Technology Award"}?
+    - [Virendra Nath Malti Mital Award]{"entity": "alumni_award_name", "value": "Virendra Nath Malti Mital Award"}?
+    - [Prof. A. S. Arya Young Earthquake Engineer Award]{"entity": "alumni_award_name", "value": "Prof. A. S. Arya Young Earthquake Engineer Award"}?
+    - [Mahesh Varma Technology Innovation Award]{"entity": "alumni_award_name", "value": "Mahesh Varma Technology Innovation Award"}?
+    - [S. R. Mehra Memorial Award]{"entity": "alumni_award_name", "value": "S. R. Mehra Memorial Award"}?
+    - What is [Research Award]{"entity": "alumni_award_name", "value": "Research Award"}?
+    - What is [Distiguished Alumni Award]{"entity": "alumni_award_name", "value": "Distinguished Alumni Award"}?
+    - What is [Outstanding Service Award]{"entity": "alumni_award_name", "value": "Outstanding Service Award"}?
+    - What is [Ramkumar Prize]{"entity": "alumni_award_name", "value": "Ramkumar Prize"}?
+    - What is [Khosla National Award]{"entity": "alumni_award_name", "value": "Khosla National Award"}?
+    - What is [HRED River Ganga Rejuvenation Award]{"entity": "alumni_award_name", "value": "HRED River Ganga Rejuvenation Award"}?
+    - What is [HRED Hydro & Renewable Energy Award]{"entity": "alumni_award_name", "value": "HRED Hydro & Renewable Energy Award"}?
+    - What is [O. P. Jain Memorial Structural Design Award]{"entity": "alumni_award_name", "value": "O. P. Jain Memorial Structural Design Award"}?
+    - What is [A.S. Arya - IITR Disaster Prevention Award]{"entity": "alumni_award_name", "value": "A.S. Arya - IITR Disaster Prevention Award"}?
+    - What is [Gopal Ranjan Technology Award]{"entity": "alumni_award_name", "value": "Gopal Ranjan Technology Award"}?
+    - What is [Shamsher Prakash Technology Award]{"entity": "alumni_award_name", "value": "Shamsher Prakash Technology Award"}?
+    - What is [Virendra Nath Malti Mital Award]{"entity": "alumni_award_name", "value": "Virendra Nath Malti Mital Award"}?
+    - What is [Prof. A. S. Arya Young Earthquake Engineer Award]{"entity": "alumni_award_name", "value": "Prof. A. S. Arya Young Earthquake Engineer Award"}?
+    - What is [Mahesh Varma Technology Innovation Award]{"entity": "alumni_award_name", "value": "Mahesh Varma Technology Innovation Award"}?
+    - What is [S. R. Mehra Memorial Award]{"entity": "alumni_award_name", "value": "S. R. Mehra Memorial Award"}?
+    - Information about [Research Award]{"entity": "alumni_award_name", "value": "Research Award"}?
+    - Information about [Distiguished Alumni Award]{"entity": "alumni_award_name", "value": "Distinguished Alumni Award"}?
+    - Information about [Outstanding Service Award]{"entity": "alumni_award_name", "value": "Outstanding Service Award"}?
+    - Information about [Ramkumar Prize]{"entity": "alumni_award_name", "value": "Ramkumar Prize"}?
+    - Information about [Khosla National Award]{"entity": "alumni_award_name", "value": "Khosla National Award"}?
+    - Information about [HRED River Ganga Rejuvenation Award]{"entity": "alumni_award_name", "value": "HRED River Ganga Rejuvenation Award"}?
+    - Information about [HRED Hydro & Renewable Energy Award]{"entity": "alumni_award_name", "value": "HRED Hydro & Renewable Energy Award"}?
+    - Information about [O. P. Jain Memorial Structural Design Award]{"entity": "alumni_award_name", "value": "O. P. Jain Memorial Structural Design Award"}?
+    - Information about [A.S. Arya - IITR Disaster Prevention Award]{"entity": "alumni_award_name", "value": "A.S. Arya - IITR Disaster Prevention Award"}?
+    - Information about [Gopal Ranjan Technology Award]{"entity": "alumni_award_name", "value": "Gopal Ranjan Technology Award"}?
+    - Information about [Shamsher Prakash Technology Award]{"entity": "alumni_award_name", "value": "Shamsher Prakash Technology Award"}?
+    - Information about [Virendra Nath Malti Mital Award]{"entity": "alumni_award_name", "value": "Virendra Nath Malti Mital Award"}?
+    - Information about [Prof. A. S. Arya Young Earthquake Engineer Award]{"entity": "alumni_award_name", "value": "Prof. A. S. Arya Young Earthquake Engineer Award"}?
+    - Information about [Mahesh Varma Technology Innovation Award]{"entity": "alumni_award_name", "value": "Mahesh Varma Technology Innovation Award"}?
+    - Information about [S. R. Mehra Memorial Award]{"entity": "alumni_award_name", "value": "S. R. Mehra Memorial Award"}?

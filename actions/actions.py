@@ -24,6 +24,22 @@ map_programme_dept = {"UG": "https://www.iitr.ac.in/academics/pages/Undergraduat
                     "PG": "https://www.iitr.ac.in/admissions/pages/Postgraduate.html",
                     "PHD": "https://www.iitr.ac.in/admissions/pages/Phd.html"}
 
+map_alumni_awards = {"Research Award": "https://alumni.iitr.ac.in/research",
+                    "Distinguished Alumni Award": "https://alumni.iitr.ac.in/awards/daa",
+                    "Outstanding Service Award": "http://awards.iitr.ac.in/alumni/osa/outstanding-service-awards.php",
+                    "Ramkumar Prize": "http://awards.iitr.ac.in/alumni/ramkumar-awards.php",
+                    "Khosla National Award": "https://alumni.iitr.ac.in/research/khosla",
+                    "HRED River Ganga Rejuvenation Award": "https://alumni.iitr.ac.in/research/river",
+                    "HRED Hydro & Renewable Energy Award": "https://alumni.iitr.ac.in/research/hydronew",
+                    "O. P. Jain Memorial Structural Design Award": "https://alumni.iitr.ac.in/research/opjain",
+                    "A.S. Arya - IITR Disaster Prevention Award": "https://alumni.iitr.ac.in/research/disaster", 
+                    "Gopal Ranjan Technology Award": "https://alumni.iitr.ac.in/research/gopal",
+                    "Shamsher Prakash Technology Award": "https://alumni.iitr.ac.in/research/shamsher",
+                    "Virendra Nath Malti Mital Award": "https://alumni.iitr.ac.in/research/vnmm",
+                    "Prof. A. S. Arya Young Earthquake Engineer Award": "https://alumni.iitr.ac.in/research/earthquake",
+                    "Mahesh Varma Technology Innovation Award": "https://alumni.iitr.ac.in/research/mahesh",
+                    "S. R. Mehra Memorial Award": "https://alumni.iitr.ac.in/research/mehra"}
+
 class ActionDepartmentInfo(Action):
 
     def name(self) -> Text:
@@ -99,4 +115,34 @@ class ActionCenter(Action):
         output = "The information about the {} can be found at the following link: {}".format(center,center)
         dispatcher.utter_message(text=output)
 
+        return []
+
+class ActionDonate(Action):
+
+    def name(self) -> Text:
+        return "action_donate"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+        
+        scheme = tracker.slots.get("scheme_name")
+        output = "The information about how to donate for the {} can be found at the following link: {} \nDetailed Information about the payment procedure can be found at {}".format(scheme,"https://alumni.iitr.ac.in/donate/donate", "http://awards.iitr.ac.in/donors/info.php")
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionAlumniAwards(Action):
+    def name(self) -> Text:
+        return "action_alumni_awards"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+
+        award = tracker.slots.get("alumni_award_name")
+        if award in map_alumni_awards.keys():
+            output = "You can get the information about the {} at {}".format(award,map_alumni_awards.get(award))
+        else:
+            output = "Distinguished Alumni Award: {}\nOutstanding Service Award: {}\nResearch Award: {}\nRamkumar Prize: {}".format(map_alumni_awards.get("Distinguished Alumni Award"),map_alumni_awards.get("Outstanding Service Award"), map_alumni_awards.get("Research Award"), map_alumni_awards.get("Ramkumar Prize"))
+        dispatcher.utter_message(text=output)
         return []

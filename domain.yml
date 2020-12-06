@@ -22,6 +22,14 @@ intents:
   - research
   - scholarships
   - recruitments
+  - top_donors
+  - alumni_schemes
+  - alumni_mentor_students
+  - alumni_avenues
+  - how_to_donate
+  - global_alumni_network
+  - alumni_news_and_outreach
+  - alumni_awards
 
 actions:
   - action_show_department_info
@@ -29,12 +37,16 @@ actions:
   - action_faculty
   - action_center
   - action_administration 
+  - action_donate
+  - action_alumni_awards
 
 entities:
   - programme
   - department_name
   - center_name
   - admin_name
+  - scheme_name
+  - alumni_award_name
 
 slots:
   programme:
@@ -48,6 +60,14 @@ slots:
     auto_fill: True
   
   admin_name:
+    type: text
+    auto_fill: True
+
+  scheme_name:
+    type: text
+    auto_fill: True
+
+  alumni_award_name:
     type: text
     auto_fill: True
 
@@ -104,6 +124,24 @@ responses:
 
   utter_recruitments:
   - text: "You can see list of all recruiters that come to IITR at https://www.iitr.ac.in/Placements/pages/index.html#pastrecruiters"
+
+  utter_top_donors:
+  - text: "You can get information about the Top Donors at http://awards.iitr.ac.in/donors/top-donors.php"
+
+  utter_alumni_schemes:
+  - text: "You can get complete information about the schemes under which the alumni can donate at http://awards.iitr.ac.in/donors/schemes.php"
+
+  utter_alumni_mentor_students:
+  - text: "You can get complete information about how alumni can mentor the students at https://alumni.iitr.ac.in/samp/"
+
+  utter_alumni_avenues:
+  - text: "You can get complete information about how the alumni can connect to the institute at http://awards.iitr.ac.in/donors/Avenues.php"
+
+  utter_global_alumni_network:
+  - text: "You can get complete information about the Global Network for IITR Alumni at https://alumni.iitr.ac.in/alumni"
+
+  utter_alumni_news:
+  - text: "You can get news related to IITR Alumni at https://alumni.iitr.ac.in/more/news"
 
 session_config:
   session_expiration_time: 60
