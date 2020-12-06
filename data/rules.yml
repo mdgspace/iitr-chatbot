@@ -22,7 +22,18 @@ rules:
   - intent: admissions
   - action: utter_admissions
 
+- rule: General Answer about Faculties
+  condition:
+  - slot_was_set:
+    - department_name: null
+  steps:
+  - intent: faculty
+  - action: utter_faculty
+
 - rule: Answer about Faculties
+  condition:
+  - slot_was_set:
+    - department_name: true
   steps:
   - intent: faculty
     entities:
@@ -47,12 +58,22 @@ rules:
   - action: action_programme
 
 - rule: Decide department
+  condition:
+  - slot_was_set:
+    - department_name: true
   steps:
   - intent: departments
     entities:
     - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
-  - action: utter_departments 
   - action: action_show_department_info
+
+- rule: General department info
+  condition:
+  - slot_was_set:
+    - department_name: null
+  steps:
+  - intent: departments
+  - action: utter_departments 
 
 - rule: Answer RTI Query
   steps:
@@ -80,11 +101,23 @@ rules:
   - action: utter_minors_honors
 
 - rule: Answer about Centers
+  condition:
+  - slot_was_set:
+    - center_name: true
   steps:
   - intent: centers
     entities:
     - center_name: ["ICC","IIC", "TL", "IPRC", "WFF", "Hospital", "TIDES", "MGCL", "EC", "DIC", "CEC", "CTRANS", "CoEDMM", "COE", "NoidaCentre", "CoN"]
   - action: action_center
+
+- rule: Answer about general Centers 
+  condition:
+  - slot_was_set:
+    - center_name: null
+  steps:
+  - intent: centers
+  - action: utter_center
+  
 - rule: Answer about Administration
   steps:
   - intent: administration
