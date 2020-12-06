@@ -46,3 +46,31 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
   
+- story: alumni path general
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: alumni_avenues
+  - action: utter_alumni_avenues
+  - intent: alumni_schemes
+  - action: utter_alumni_schemes
+  - intent: alumni_mentor_students
+  - action: utter_alumni_mentor_students
+  - intent: top_donors
+  - action: utter_top_donors
+  - intent: how_to_donate
+    entities:
+    - scheme_name: ["scheme"]
+  - action: action_donate
+  - intent: alumni_awards
+    entities: 
+    - alumni_award_name: ["Research Award", "Distinguished Alumni Award", "Outstanding Service Award", "Ramkumar Prize", "Khosla National Award", "HRED River Ganga Rejuvenation Award",
+     "HRED Hydro & Renewable Energy Award", "O. P. Jain Memorial Structural Design Award", "A.S. Arya - IITR Disaster Prevention Award", "Gopal Ranjan Technology Award",
+     "Shamsher Prakash Technology Award", "Virendra Nath Malti Mital Award", "Prof. A. S. Arya Young Earthquake Engineer Award", "Mahesh Varma Technology Innovation Award", "S. R. Mehra Memorial Award"]
+  - action: action_alumni_awards
+  - intent: alumni_news_and_outreach
+  - action: utter_alumni_news
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
