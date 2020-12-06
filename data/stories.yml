@@ -16,7 +16,6 @@ stories:
   - intent: departments
     entities:
     - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
-  - action: utter_departments 
   - action: action_show_department_info
   - intent: course_ug
   - action: utter_course_ug

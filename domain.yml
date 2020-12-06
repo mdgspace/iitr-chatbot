@@ -82,7 +82,7 @@ responses:
   - text: "You are welcome!"
 
   utter_departments:
-  - text: "IITR has 22 departments."
+  - text: "IITR has 22 departments. List can be found at: https://www.iitr.ac.in/Main/pages/_en_Departments__en_.html"
 
   utter_goodbye:
   - text: "Bye, see you at IITR!"
@@ -91,7 +91,7 @@ responses:
   - text: "IITR admits students through JEE Advanced for B.Tech and for B.Arch through JEE Main followed by JEE Advanced and AAT."
 
   utter_faculty:
-  - text: "The information about the faculty can be found at the following link:"
+  - text: "The information about the faculties can be found at the following link: https://www.iitr.ac.in/Main/pages/_en_For_Faculty__en_.html"
 
   utter_course_ug:
   - text: "IITR offers multiple undergraduate programmes leading to B.Arch. and B.Tech. degrees, which are of 5 and 4 years duration, respectively."
@@ -142,6 +142,15 @@ responses:
 
   utter_alumni_news:
   - text: "You can get news related to IITR Alumni at https://alumni.iitr.ac.in/more/news"
+
+  utter_center:
+  - text: "Please find the information about centers here: https://www.iitr.ac.in/Main/pages/_en_Centers__en_.html"
+
+  utter_donate:
+  - text: "The information about how to donate for the scheme can be found at the following link: https://alumni.iitr.ac.in/donate/donate\nDetailed Information about the payment procedure can be found at http://awards.iitr.ac.in/donors/info.php"
+
+  utter_alumni_awards:
+  - text: "Distinguished Alumni Award: https://alumni.iitr.ac.in/awards/daa\nOutstanding Service Award: http://awards.iitr.ac.in/alumni/osa/outstanding-service-awards.php\nResearch Award: https://alumni.iitr.ac.in/research\nRamkumar Prize: http://awards.iitr.ac.in/alumni/ramkumar-awards.php"
 
 session_config:
   session_expiration_time: 60

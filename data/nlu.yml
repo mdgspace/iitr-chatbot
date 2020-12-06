@@ -369,6 +369,9 @@ nlu:
 
 - intent: faculty
   examples: |
+    - Who all are the faculties?
+    - Where can I find faculty information?
+    - Faculty page
     - Faculty of [CSE]{"entity": "department_name", "value": "CSE"} branch 
     - Faculty of [Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} branch
     - Faculty of [CS]{"entity": "department_name", "value": "CSE"} branch
@@ -492,6 +495,8 @@ nlu:
   examples: |
     - What are the departments available?
     - Number of departments available?
+    - How many departments are there?
+    - How many departments are present?
     - Is [CSE]{"entity": "department_name", "value": "CSE"} department there?
     - Is [Computer Science and Engineering]{"entity": "department_name", "value": "CSE"} department there?
     - Is [CS]{"entity": "department_name", "value": "CSE"} department there?
@@ -679,7 +684,7 @@ nlu:
     - Pay fee online
     - How to make online fee payment at IITR?
     - How to make online fee payment?
-
+    
 - intent: centers
   examples: |
     - What are the centers present at IIT Roorkee?
@@ -688,13 +693,6 @@ nlu:
     - How many centers present at IIT Roorkee?
     - What are the types of academic centers are present at IITR?
     - Which technical centers are present at IITR?
-    - Where is [ICC]{"entity":"center_name", "value": "ICC"}?
-    - What are the centres present at IIT Roorkee?
-    - What are the centres present at IITR?
-    - How many centres present at IITR?
-    - How many centres present at IIT Roorkee?
-    - What are the types of academic centres are present at IITR?
-    - Which technical centres are present at IITR?
     - Where is the [ICC]{"entity":"center_name", "value": "ICC"} located?
     - Where is the [Institute Computer Centre]{"entity":"center_name", "value": "ICC"} located?
     - What is the [ICC]{"entity":"center_name", "value": "ICC"}?
