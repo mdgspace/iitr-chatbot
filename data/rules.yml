@@ -161,7 +161,18 @@ rules:
   - intent: alumni_avenues
   - action: utter_alumni_avenues
 
+- rule: Answer General How to Donate
+  condition:
+  - slot_was_set:
+    - scheme_name: null
+  steps:
+  - intent: how_to_donate
+  - action: utter_donate
+
 - rule: Answer How to Donate
+  condition:
+  - slot_was_set:
+    - scheme_name: true
   steps: 
   - intent: how_to_donate
     entities:
@@ -178,7 +189,18 @@ rules:
   - intent: alumni_news_and_outreach
   - action: utter_alumni_news
 
+- rule: General Answer Alumni Awards
+  condition:
+  - slot_was_set:
+    - alumni_award_name: null
+  steps: 
+  - intent: alumni_awards
+  - action: utter_alumni_awards
+
 - rule: Answer Alumni Awards
+  condition:
+  - slot_was_set:
+    - alumni_award_name: true
   steps: 
   - intent: alumni_awards
     entities: 

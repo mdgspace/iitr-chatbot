@@ -146,6 +146,12 @@ responses:
   utter_center:
   - text: "Please find the information about centers here: https://www.iitr.ac.in/Main/pages/_en_Centers__en_.html"
 
+  utter_donate:
+  - text: "The information about how to donate for the scheme can be found at the following link: https://alumni.iitr.ac.in/donate/donate\nDetailed Information about the payment procedure can be found at http://awards.iitr.ac.in/donors/info.php"
+
+  utter_alumni_awards:
+  - text: "Distinguished Alumni Award: https://alumni.iitr.ac.in/awards/daa\nOutstanding Service Award: http://awards.iitr.ac.in/alumni/osa/outstanding-service-awards.php\nResearch Award: https://alumni.iitr.ac.in/research\nRamkumar Prize: http://awards.iitr.ac.in/alumni/ramkumar-awards.php"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
