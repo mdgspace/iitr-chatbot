@@ -143,6 +143,7 @@ responses:
   utter_alumni_news:
   - text: "You can get news related to IITR Alumni at https://alumni.iitr.ac.in/more/news"
 
+<<<<<<< HEAD
   utter_center:
   - text: "Please find the information about centers here: https://www.iitr.ac.in/Main/pages/_en_Centers__en_.html"
 
@@ -152,6 +153,8 @@ responses:
   utter_alumni_awards:
   - text: "Distinguished Alumni Award: https://alumni.iitr.ac.in/awards/daa\nOutstanding Service Award: http://awards.iitr.ac.in/alumni/osa/outstanding-service-awards.php\nResearch Award: https://alumni.iitr.ac.in/research\nRamkumar Prize: http://awards.iitr.ac.in/alumni/ramkumar-awards.php"
 
+=======
+>>>>>>> 56fa9b202e3211ec6ee47d85b295937bc2419e04
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

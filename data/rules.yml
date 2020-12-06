@@ -188,7 +188,7 @@ rules:
   steps: 
   - intent: alumni_news_and_outreach
   - action: utter_alumni_news
-
+  
 - rule: General Answer Alumni Awards
   condition:
   - slot_was_set:
@@ -201,6 +201,7 @@ rules:
   condition:
   - slot_was_set:
     - alumni_award_name: true
+
   steps: 
   - intent: alumni_awards
     entities: 
