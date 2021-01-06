@@ -358,6 +358,17 @@ nlu:
     - how is iitr?
     - who is iitr?
 
+- intent: contact
+  examples: |
+    - how to contact iitr?
+    - how to contact iitr office?
+    - contact
+    - where to email for inquiry?
+    - where to email?
+    - what is the email?
+    - where is the office?
+    - office
+
 - intent: admissions
   examples: |
     - What is the procedure for admission?

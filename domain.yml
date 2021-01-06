@@ -3,6 +3,7 @@ version: "2.0"
 intents:
   - greet
   - goodbye
+  - contact
   - thanks
   - general
   - admissions
@@ -39,6 +40,7 @@ actions:
   - action_administration 
   - action_donate
   - action_alumni_awards
+  - action_contact
 
 entities:
   - programme
@@ -113,6 +115,7 @@ responses:
 
   utter_branch_change:
   - text: "Please refer to the following blog for information on branch change: http://watchout.iitr.ac.in/2019/08/branch-change"
+  
   utter_administration:
   - text: "Hope this helped!"
 

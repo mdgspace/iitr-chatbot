@@ -100,6 +100,11 @@ rules:
   - intent: fee
   - action: utter_fee
 
+- rule: Answer about contact
+  steps:
+  - intent: contact
+  - action: action_contact
+
 - rule: Answer about Minors and Honors
   steps:
   - intent: minors_honors
