@@ -38,6 +38,8 @@ actions:
   - action_faculty
   - action_center
   - action_administration 
+  - action_recruitments
+  - action_scholarships
   - action_RTI
   - action_top_donors
   - action_alumni_schemes
@@ -51,6 +53,7 @@ entities:
   - department_name
   - center_name
   - admin_name
+  - recruitments_name
   - scheme_name
   - alumni_award_name
 

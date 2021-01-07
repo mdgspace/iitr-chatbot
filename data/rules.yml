@@ -127,14 +127,21 @@ rules:
   steps:
   - intent: centers
   - action: utter_center
-  
+
+- rule: Answer about general Administration 
+  condition:
+  - slot_was_set:
+    - admin_name: null
+  steps:
+  - intent: administration
+  - action: utter_administration
+
 - rule: Answer about Administration
   steps:
   - intent: administration
     entities:
-    - admin_name: ["Dean", "Director", "Registrar", "Officer"]  
+    - admin_name: ["Dean", "Director", "Registrar", "Officer","HODs","Senate","Estate","Sac"]  
   - action: action_administration
-  - action: utter_administration
 
 - rule: Answer Research related queries
   steps:
@@ -144,12 +151,22 @@ rules:
 - rule: Answer Scholarships related queries
   steps:
   - intent: scholarships
-  - action: utter_scholarships
+  - action: action_scholarships
+
+- rule: Answer general Recruitments related queries
+  condition:
+  - slot_was_set:
+    - recruitments_name: null
+  steps:
+  - intent: recruitments
+  - action: utter_recruitments
 
 - rule: Answer Recruitments related queries
   steps:
   - intent: recruitments
-  - action: utter_recruitments
+    entities:
+    - recruitments_name: ["placements","job_openings","projects","Spark","faculty_openings"]
+  - action: action_recruitments
 
 - rule: Answer Top Donors
   steps: 

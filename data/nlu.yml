@@ -868,16 +868,22 @@ nlu:
 
 - intent: recruitments
   examples: |
-    - How is placements at IITR?
-    - who all come to recruit at Roorkee?
-    - what is the highest package?
-    - Average package
-    - Does Google come?
-    - Microsoft
-    - Amazon
-    - Apple
-    - What is minimum package?
-    - What companies come to IIT Roorkee?
+    - How is [placements]{"entity":"recruitments_name","value":"placements"} at IITR?
+    - who all come to [recruit]{"entity":"recruitments_name","value":"placements"} at Roorkee?
+    - what is the highest [package]{"entity":"recruitments_name","value":"placements"}?
+    - Average [package]{"entity":"recruitments_name","value":"placements"}
+    - Does [Google]{"entity":"recruitments_name","value":"placements"} come?
+    - What is [minimum package]{"entity":"recruitments_name","value":"placements"}?
+    - What [companies]{"entity":"recruitments_name","value":"placements"} come to IIT Roorkee?
+    - What are other [job openings]{"entity":"recruitments_name","value":"job_openings"} here?
+    - Any [jobs]{"entity":"recruitments_name","value":"job_openings"} open here?
+    - Any [project jobs]{"entity":"recruitments_name","value":"projects"} open here?
+    - Are there any [projects]{"entity":"recruitments_name","value":"projects"} open right now?
+    - what is [spark]{"entity":"recruitments_name","value":"Spark"}?
+    - Are there jobs open at [spark]{"entity":"recruitments_name","value":"Spark"}?
+    - Any [openings for faculty]{"entity":"recruitments_name","value":"faculty_openings"}?
+    - Any [faculty positions]{"entity":"recruitments_name","value":"faculty_openings"}?  -
+    - Are there [faculty openings]{"entity":"recruitments_name","value":"faculty_openings"}?
 
 - intent: administration
   examples: |
@@ -937,6 +943,14 @@ nlu:
     - who is the officer [Institute Architect]{"entity": "admin_name", "value": "Officer"}?
     - who is the officer [Sports Officer]{"entity": "admin_name", "value": "Officer"}?
     - who is the officer [Security Officer]{"entity": "admin_name", "value": "Officer"}?
+    - who is the [HOD]{"entity":"admin_name","value":"HODs"}?
+    - who is in the [Senate]{"entity":"admin_name","value":"Senate"}?
+    - who is in the [Estate]{"entity":"admin_name","value":"Estate"}?
+    - who is in the [Sac]{"entity":"admin_name","value":"Sac"}?
+    - who is in the [SAC]{"entity":"admin_name","value":"Sac"}?
+    - what is the [Sac]{"entity":"admin_name","value":"Sac"}?
+    - who is [Sac head]{"entity":"admin_name","value":"Sac"}?
+    - who is [SAC head]{"entity":"admin_name","value":"Sac"}?
   
 - intent: top_donors
   examples: |

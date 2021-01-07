@@ -57,6 +57,21 @@ map_programme = {"UG": "IITR provides UG (including M.Sc.) courses in 17 branche
                 "PG": "IITR provides PG (including Ph.D.) courses in 16 departments.",
                 "PHD": "IITR provides PG (including Ph.D.) courses in 16 departments."}
 
+map_admin = {"Dean":"central", 
+            "Director":"central", 
+            "Registrar":"central", 
+            "Officer":"central",
+            "HODs":"institute_admin",
+            "Senate":"senate",
+            "Estate":"estate_and_works",
+            "Sac":"SAC"}
+
+map_student_recruitments = {"placements":"",
+                    "job_openings":"",
+                    "projects":"",
+                    "Spark":""}
+map_faculty_recruitments = {"faculty_openings":""}
+
 map_alumni_awards = {"Research Award": "research_award",
                     "Distinguished Alumni Award": "distinguished_alumni_award",
                     "Outstanding Service Award": "outstanding_service_award",
@@ -106,7 +121,7 @@ class ActionDepartmentInfo(Action):
         else:
             r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Admission/departments/list")
             data = r.json()
-            output = "Please find informations about the departments here: {}".format(data["url"])
+            output = "Please find information about the departments here: {}".format(data["url"])
         dispatcher.utter_message(text=output)
 
         return []
@@ -146,13 +161,12 @@ class ActionFaculty(Action):
         else:
             r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Admission/faculty/list")
             data = r.json()
-            output = "Please find informations about the faculties here: {}".format(data["url"])
+            output = "Please find information about the faculties here: {}".format(data["url"])
         dispatcher.utter_message(text=output)
 
         return []
 
-class ActionAdministration(Action):
-    
+class ActionAdministration(Action):   
     def name(self) -> Text:
         return "action_administration"
 
@@ -160,10 +174,60 @@ class ActionAdministration(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         admin = tracker.slots.get("admin_name")
-        output = "\nYou can find information about the {} at this link:{}".format(admin,"https://www.iitr.ac.in/administration/pages/Institute_Central_Administration.html")
+        if admin in map_admin.keys():
+            r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Administration/member_list/{}".format(map_admin.get(admin)))
+            data = r.json() 
+            output = "The information about the {} can be found at the following link: {}".format(admin,data["url"])
+        else:
+            r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Administration/member_list/institute_admin")
+            data = r.json()
+            output = "Please find information about the administration here: {}".format(data["url"])
+       
         dispatcher.utter_message(text=output)
 
         return []
+
+class ActionRecruitments(Action):   
+    def name(self) -> Text:
+        return "action_recruitments"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        recruitment_details = tracker.slots.get("recruitments_name")
+        if recruitment_details in map_student_recruitments.keys():
+            r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Recruitments/student/{}".format(map_student_recruitments.get(recruitment_details)))
+            data = r.json() 
+            output = "The information about {} can be found at the following link: {}".format(recruitment_details,data["url"])
+        elif recruitment_details in map_faculty_recruitments.keys():
+            r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Recruitments/faculty/{}".format(map_faculty_recruitments.get(recruitment_details)))
+            data = r.json()
+            output = "The information about {} can be found at the following link: {}".format(recruitment_details,data["url"])
+        else:
+            r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Recruitments/faculty/{}".format(map_faculty_recruitments.get(recruitment_details)))
+            data = r.json()
+            output = "Please find information about recruitments here: {}".format(data["url"])
+
+        dispatcher.utter_message(text=output)
+
+        return []
+
+class ActionScholarships(Action):
+    def name(self) -> Text:
+        return "action_scholarships"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Awards_and_Scholarships/scholarships/MCM_Criteria")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can find more information about Scholarships at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
 
 class ActionCenter(Action):
     
@@ -182,7 +246,7 @@ class ActionCenter(Action):
         else:
             r = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Admission/departments/list")
             data = r.json()
-            output = "Please find informations about the centers here: {}".format(data["url"])
+            output = "Please find information about the centers here: {}".format(data["url"])
 
         dispatcher.utter_message(text=output)
 
@@ -263,7 +327,7 @@ class ActionDonate(Action):
         
         scheme = tracker.slots.get("scheme_name")
         response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/how_to_donate")
-        json_data = response.json();
+        json_data = response.json()
         url_how_to_donate = json_data["url"]
         
         if scheme == None:
