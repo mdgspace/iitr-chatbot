@@ -3,6 +3,7 @@ version: "2.0"
 intents:
   - greet
   - goodbye
+  - contact
   - thanks
   - general
   - admissions
@@ -22,6 +23,14 @@ intents:
   - research
   - scholarships
   - recruitments
+  - top_donors
+  - alumni_schemes
+  - alumni_mentor_students
+  - alumni_avenues
+  - how_to_donate
+  - global_alumni_network
+  - alumni_news_and_outreach
+  - alumni_awards
 
 actions:
   - action_show_department_info
@@ -29,12 +38,21 @@ actions:
   - action_faculty
   - action_center
   - action_administration 
+  - action_RTI
+  - action_top_donors
+  - action_alumni_schemes
+  - action_global_alumni_network
+  - action_donate
+  - action_alumni_awards
+  - action_contact
 
 entities:
   - programme
   - department_name
   - center_name
   - admin_name
+  - scheme_name
+  - alumni_award_name
 
 slots:
   programme:
@@ -51,6 +69,14 @@ slots:
     type: text
     auto_fill: True
 
+  scheme_name:
+    type: text
+    auto_fill: True
+
+  alumni_award_name:
+    type: text
+    auto_fill: True
+
 responses:
   utter_greet:
   - text: "Welcome to IITR! How may I help you?"
@@ -62,7 +88,7 @@ responses:
   - text: "You are welcome!"
 
   utter_departments:
-  - text: "IITR has 22 departments."
+  - text: "IITR has 22 departments. List can be found at: https://www.iitr.ac.in/Main/pages/_en_Departments__en_.html"
 
   utter_goodbye:
   - text: "Bye, see you at IITR!"
@@ -71,16 +97,13 @@ responses:
   - text: "IITR admits students through JEE Advanced for B.Tech and for B.Arch through JEE Main followed by JEE Advanced and AAT."
 
   utter_faculty:
-  - text: "The information about the faculty can be found at the following link:"
+  - text: "The information about the faculties can be found at the following link: https://www.iitr.ac.in/Main/pages/_en_For_Faculty__en_.html"
 
   utter_course_ug:
   - text: "IITR offers multiple undergraduate programmes leading to B.Arch. and B.Tech. degrees, which are of 5 and 4 years duration, respectively."
 
   utter_course_pg:
   - text: "IITR offers multiple postgraduate programmes leading to M.Arch. (or M.U.R.P), M.Tech., MBA, and Ph.D. degrees"
-
-  utter_RTI:
-  - text: "You can find more information about RTI process at https://www.iitr.ac.in/Main/pages/_en_Right_To_Information__en_.html"
 
   utter_acad_cal:
   - text: "You can find the academic calendar for all the programmes here: https://www.iitr.ac.in/academics/pages/Academic_Calendar.html"
@@ -93,6 +116,7 @@ responses:
 
   utter_branch_change:
   - text: "Please refer to the following blog for information on branch change: http://watchout.iitr.ac.in/2019/08/branch-change"
+  
   utter_administration:
   - text: "Hope this helped!"
 
@@ -104,6 +128,21 @@ responses:
 
   utter_recruitments:
   - text: "You can see list of all recruiters that come to IITR at https://www.iitr.ac.in/Placements/pages/index.html#pastrecruiters"
+
+  utter_alumni_mentor_students:
+  - text: "You can get complete information about how alumni can mentor the students at https://alumni.iitr.ac.in/samp/"
+
+  utter_alumni_avenues:
+  - text: "You can get complete information about how the alumni can connect to the institute at http://awards.iitr.ac.in/donors/Avenues.php"
+
+  utter_alumni_news:
+  - text: "You can get news related to IITR Alumni at https://alumni.iitr.ac.in/more/news"
+
+  utter_center:
+  - text: "Please find the information about centers here: https://www.iitr.ac.in/Main/pages/_en_Centers__en_.html"
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
 session_config:
   session_expiration_time: 60

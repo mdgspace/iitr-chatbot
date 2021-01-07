@@ -17,12 +17,28 @@ rules:
   - intent: thanks
   - action: utter_thanks
 
+- rule: Answer general questions
+  steps:
+  - intent: general
+  - action: utter_general
+
 - rule: Answer about admission anytime the user asks
   steps:
   - intent: admissions
   - action: utter_admissions
 
+- rule: General Answer about Faculties
+  condition:
+  - slot_was_set:
+    - department_name: null
+  steps:
+  - intent: faculty
+  - action: utter_faculty
+
 - rule: Answer about Faculties
+  condition:
+  - slot_was_set:
+    - department_name: true
   steps:
   - intent: faculty
     entities:
@@ -47,22 +63,32 @@ rules:
   - action: action_programme
 
 - rule: Decide department
+  condition:
+  - slot_was_set:
+    - department_name: true
   steps:
   - intent: departments
     entities:
     - department_name: ["CSE","ECE", "EE", "CE", "Biotech", "CH", "Arch", "ASE", "Chem", "Earth", "EarthSci", "HSS", "Hydro", "HRE", "Management", "Maths", "MIE", "MME", "Paper", "Poly", "Physics", "Water"]
-  - action: utter_departments 
   - action: action_show_department_info
+
+- rule: General department info
+  condition:
+  - slot_was_set:
+    - department_name: null
+  steps:
+  - intent: departments
+  - action: utter_departments 
 
 - rule: Answer RTI Query
   steps:
   - intent: RTI
-  - action: utter_RTI
+  - action: action_RTI
 
 - rule: Answer Right to Information Act Query
   steps:
   - intent: Right to Information Act 
-  - action: utter_RTI
+  - action: action_RTI
 
 - rule: Answer about Acad Calender
   steps:
@@ -74,17 +100,34 @@ rules:
   - intent: fee
   - action: utter_fee
 
+- rule: Answer about contact
+  steps:
+  - intent: contact
+  - action: action_contact
+
 - rule: Answer about Minors and Honors
   steps:
   - intent: minors_honors
   - action: utter_minors_honors
 
 - rule: Answer about Centers
+  condition:
+  - slot_was_set:
+    - center_name: true
   steps:
   - intent: centers
     entities:
     - center_name: ["ICC","IIC", "TL", "IPRC", "WFF", "Hospital", "TIDES", "MGCL", "EC", "DIC", "CEC", "CTRANS", "CoEDMM", "COE", "NoidaCentre", "CoN"]
   - action: action_center
+
+- rule: Answer about general Centers 
+  condition:
+  - slot_was_set:
+    - center_name: null
+  steps:
+  - intent: centers
+  - action: utter_center
+  
 - rule: Answer about Administration
   steps:
   - intent: administration
@@ -107,3 +150,77 @@ rules:
   steps:
   - intent: recruitments
   - action: utter_recruitments
+
+- rule: Answer Top Donors
+  steps: 
+  - intent: top_donors
+  - action: action_top_donors
+
+- rule: Answer Alumni Schemes
+  steps: 
+  - intent: alumni_schemes
+  - action: action_alumni_schemes
+
+- rule: Answer Alumni Mentor Students
+  steps:
+  - intent: alumni_mentor_students
+  - action: utter_alumni_mentor_students
+
+- rule: Answer Alumni Avenues
+  steps: 
+  - intent: alumni_avenues
+  - action: utter_alumni_avenues
+
+- rule: Answer General How to Donate
+  condition:
+  - slot_was_set:
+    - scheme_name: null
+  steps:
+  - intent: how_to_donate
+  - action: action_donate
+
+- rule: Answer How to Donate
+  condition:
+  - slot_was_set:
+    - scheme_name: true
+  steps: 
+  - intent: how_to_donate
+    entities:
+    - scheme_name: ["scheme"]
+  - action: action_donate
+
+- rule: Answer Global Alumni Network
+  steps: 
+  - intent: global_alumni_network
+  - action: action_global_alumni_network
+
+- rule: Answer Alumni News
+  steps: 
+  - intent: alumni_news_and_outreach
+  - action: utter_alumni_news
+
+- rule: Answer General Alumni Awards
+  condition:
+  - slot_was_set:
+    - alumni_award_name: null
+  steps: 
+  - intent: alumni_awards
+  - action: action_alumni_awards
+
+- rule: Answer Alumni Awards
+  condition:
+  - slot_was_set:
+    - alumni_award_name: true
+
+  steps: 
+  - intent: alumni_awards
+    entities: 
+    - alumni_award_name: ["Research Award", "Distinguished Alumni Award", "Outstanding Service Award", "Ramkumar Prize", "Khosla National Award", "HRED River Ganga Rejuvenation Award",
+     "HRED Hydro & Renewable Energy Award", "O. P. Jain Memorial Structural Design Award", "A.S. Arya - IITR Disaster Prevention Award", "Gopal Ranjan Technology Award",
+     "Shamsher Prakash Technology Award", "Virendra Nath Malti Mital Award", "Prof. A. S. Arya Young Earthquake Engineer Award", "Mahesh Varma Technology Innovation Award", "S. R. Mehra Memorial Award"]
+  - action: action_alumni_awards
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
