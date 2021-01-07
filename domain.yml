@@ -38,6 +38,10 @@ actions:
   - action_faculty
   - action_center
   - action_administration 
+  - action_RTI
+  - action_top_donors
+  - action_alumni_schemes
+  - action_global_alumni_network
   - action_donate
   - action_alumni_awards
   - action_contact
@@ -101,9 +105,6 @@ responses:
   utter_course_pg:
   - text: "IITR offers multiple postgraduate programmes leading to M.Arch. (or M.U.R.P), M.Tech., MBA, and Ph.D. degrees"
 
-  utter_RTI:
-  - text: "You can find more information about RTI process at https://www.iitr.ac.in/Main/pages/_en_Right_To_Information__en_.html"
-
   utter_acad_cal:
   - text: "You can find the academic calendar for all the programmes here: https://www.iitr.ac.in/academics/pages/Academic_Calendar.html"
 
@@ -128,32 +129,17 @@ responses:
   utter_recruitments:
   - text: "You can see list of all recruiters that come to IITR at https://www.iitr.ac.in/Placements/pages/index.html#pastrecruiters"
 
-  utter_top_donors:
-  - text: "You can get information about the Top Donors at http://awards.iitr.ac.in/donors/top-donors.php"
-
-  utter_alumni_schemes:
-  - text: "You can get complete information about the schemes under which the alumni can donate at http://awards.iitr.ac.in/donors/schemes.php"
-
   utter_alumni_mentor_students:
   - text: "You can get complete information about how alumni can mentor the students at https://alumni.iitr.ac.in/samp/"
 
   utter_alumni_avenues:
   - text: "You can get complete information about how the alumni can connect to the institute at http://awards.iitr.ac.in/donors/Avenues.php"
 
-  utter_global_alumni_network:
-  - text: "You can get complete information about the Global Network for IITR Alumni at https://alumni.iitr.ac.in/alumni"
-
   utter_alumni_news:
   - text: "You can get news related to IITR Alumni at https://alumni.iitr.ac.in/more/news"
 
   utter_center:
   - text: "Please find the information about centers here: https://www.iitr.ac.in/Main/pages/_en_Centers__en_.html"
-
-  utter_donate:
-  - text: "The information about how to donate for the scheme can be found at the following link: https://alumni.iitr.ac.in/donate/donate\nDetailed Information about the payment procedure can be found at http://awards.iitr.ac.in/donors/info.php"
-
-  utter_alumni_awards:
-  - text: "Distinguished Alumni Award: https://alumni.iitr.ac.in/awards/daa\n Outstanding Service Award: http://awards.iitr.ac.in/alumni/osa/outstanding-service-awards.php\nResearch Award: https://alumni.iitr.ac.in/research\nRamkumar Prize: http://awards.iitr.ac.in/alumni/ramkumar-awards.php"
 
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?

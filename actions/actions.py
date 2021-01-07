@@ -57,21 +57,21 @@ map_programme = {"UG": "IITR provides UG (including M.Sc.) courses in 17 branche
                 "PG": "IITR provides PG (including Ph.D.) courses in 16 departments.",
                 "PHD": "IITR provides PG (including Ph.D.) courses in 16 departments."}
 
-map_alumni_awards = {"Research Award": "https://alumni.iitr.ac.in/research",
-                    "Distinguished Alumni Award": "https://alumni.iitr.ac.in/awards/daa",
-                    "Outstanding Service Award": "http://awards.iitr.ac.in/alumni/osa/outstanding-service-awards.php",
-                    "Ramkumar Prize": "http://awards.iitr.ac.in/alumni/ramkumar-awards.php",
-                    "Khosla National Award": "https://alumni.iitr.ac.in/research/khosla",
-                    "HRED River Ganga Rejuvenation Award": "https://alumni.iitr.ac.in/research/river",
-                    "HRED Hydro & Renewable Energy Award": "https://alumni.iitr.ac.in/research/hydronew",
-                    "O. P. Jain Memorial Structural Design Award": "https://alumni.iitr.ac.in/research/opjain",
-                    "A.S. Arya - IITR Disaster Prevention Award": "https://alumni.iitr.ac.in/research/disaster", 
-                    "Gopal Ranjan Technology Award": "https://alumni.iitr.ac.in/research/gopal",
-                    "Shamsher Prakash Technology Award": "https://alumni.iitr.ac.in/research/shamsher",
-                    "Virendra Nath Malti Mital Award": "https://alumni.iitr.ac.in/research/vnmm",
-                    "Prof. A. S. Arya Young Earthquake Engineer Award": "https://alumni.iitr.ac.in/research/earthquake",
-                    "Mahesh Varma Technology Innovation Award": "https://alumni.iitr.ac.in/research/mahesh",
-                    "S. R. Mehra Memorial Award": "https://alumni.iitr.ac.in/research/mehra"}
+map_alumni_awards = {"Research Award": "research_award",
+                    "Distinguished Alumni Award": "distinguished_alumni_award",
+                    "Outstanding Service Award": "outstanding_service_award",
+                    "Ramkumar Prize": "ramkumar_prize",
+                    "Khosla National Award": "khosla_national_award",
+                    "HRED River Ganga Rejuvenation Award": "HRED_river_ganga_rejuvenation_award",
+                    "HRED Hydro & Renewable Energy Award": "HRED_hydro_&_renewable_energy_award",
+                    "O. P. Jain Memorial Structural Design Award": "OP_jain_memorial_structural_design_award",
+                    "A.S. Arya - IITR Disaster Prevention Award": "AS_arya_IITR_disaster_prevention_award", 
+                    "Gopal Ranjan Technology Award": "gopal_ranjan_technology_award",
+                    "Shamsher Prakash Technology Award": "shamsher_prakash_technology_award",
+                    "Virendra Nath Malti Mital Award": "virendra_nath_malti_mital_award",
+                    "Prof. A. S. Arya Young Earthquake Engineer Award": "Prof. A. S. Arya Young Earthquake Engineer Award",
+                    "Mahesh Varma Technology Innovation Award": "Mahesh Varma Technology Innovation Award",
+                    "S. R. Mehra Memorial Award": "S. R. Mehra Memorial Award"}
 
 class ActionContact(Action):
     
@@ -188,6 +188,70 @@ class ActionCenter(Action):
 
         return []
 
+class ActionRTI(Action):
+    def name(self) -> Text:
+        return "action_RTI"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Right_To_Information/information/RTI")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can find more information about RTI process at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionTopDonors(Action):
+    def name(self) -> Text:
+        return "action_top_donors"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/donations")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can get information about the Top Donors at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionDonationSchemes(Action):
+    def name(self) -> Text:
+        return "action_alumni_schemes"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/donation_schemes")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can get complete information about the schemes under which the alumni can donate at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionGlobalAlumniNetwork(Action):
+    def name(self) -> Text:
+        return "action_global_alumni_network"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/global_network/alumni")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can get complete information about the Global Network for IITR Alumni at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
 class ActionDonate(Action):
 
     def name(self) -> Text:
@@ -198,7 +262,14 @@ class ActionDonate(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
         
         scheme = tracker.slots.get("scheme_name")
-        output = "The information about how to donate for the {} can be found at the following link: {} \nDetailed Information about the payment procedure can be found at {}".format(scheme,"https://alumni.iitr.ac.in/donate/donate", "http://awards.iitr.ac.in/donors/info.php")
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/how_to_donate")
+        json_data = response.json();
+        url_how_to_donate = json_data["url"]
+        
+        if scheme == None:
+            scheme = "Schemes"
+
+        output = "The information about how to donate for the {} can be found at the following link: {} \nDetailed Information about the payment procedure can be found at {}".format(scheme,url_how_to_donate, "http://awards.iitr.ac.in/donors/info.php")
         dispatcher.utter_message(text=output)
         return []
 
@@ -211,9 +282,29 @@ class ActionAlumniAwards(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
 
         award = tracker.slots.get("alumni_award_name")
+
         if award in map_alumni_awards.keys():
-            output = "You can get the information about the {} at {}".format(award,map_alumni_awards.get(award))
+            response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/awards/"+map_alumni_awards.get(award))
+            json_data = response.json();
+            url_award = json_data["url"]
+            output = "You can get the information about the {} at {}".format(award,url_award)
         else:
-            output = "Distinguished Alumni Award: {}\nOutstanding Service Award: {}\nResearch Award: {}\nRamkumar Prize: {}".format(map_alumni_awards.get("Distinguished Alumni Award"),map_alumni_awards.get("Outstanding Service Award"), map_alumni_awards.get("Research Award"), map_alumni_awards.get("Ramkumar Prize"))
+            response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/awards/"+map_alumni_awards.get("Distinguished Alumni Award"))
+            json_data = response.json();
+            url_distinguished_alumni_award = json_data["url"]
+
+            response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/awards/"+map_alumni_awards.get("Outstanding Service Award"))
+            json_data = response.json();
+            url_outstanding_service_award = json_data["url"]
+
+            response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/awards/"+map_alumni_awards.get("Research Award"))
+            json_data = response.json();
+            url_research_award = json_data["url"]
+
+            response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/awards/"+map_alumni_awards.get("Ramkumar Prize"))
+            json_data = response.json();
+            url_ramkumar_prize = json_data["url"]
+
+            output = "Distinguished Alumni Award: {}\nOutstanding Service Award: {}\nResearch Award: {}\nRamkumar Prize: {}".format(url_distinguished_alumni_award,url_outstanding_service_award,url_research_award,url_ramkumar_prize)
         dispatcher.utter_message(text=output)
         return []

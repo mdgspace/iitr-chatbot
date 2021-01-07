@@ -83,12 +83,12 @@ rules:
 - rule: Answer RTI Query
   steps:
   - intent: RTI
-  - action: utter_RTI
+  - action: action_RTI
 
 - rule: Answer Right to Information Act Query
   steps:
   - intent: Right to Information Act 
-  - action: utter_RTI
+  - action: action_RTI
 
 - rule: Answer about Acad Calender
   steps:
@@ -154,12 +154,12 @@ rules:
 - rule: Answer Top Donors
   steps: 
   - intent: top_donors
-  - action: utter_top_donors
+  - action: action_top_donors
 
 - rule: Answer Alumni Schemes
   steps: 
   - intent: alumni_schemes
-  - action: utter_alumni_schemes
+  - action: action_alumni_schemes
 
 - rule: Answer Alumni Mentor Students
   steps:
@@ -177,7 +177,7 @@ rules:
     - scheme_name: null
   steps:
   - intent: how_to_donate
-  - action: utter_donate
+  - action: action_donate
 
 - rule: Answer How to Donate
   condition:
@@ -192,7 +192,7 @@ rules:
 - rule: Answer Global Alumni Network
   steps: 
   - intent: global_alumni_network
-  - action: utter_global_alumni_network
+  - action: action_global_alumni_network
 
 - rule: Answer Alumni News
   steps: 
@@ -205,7 +205,7 @@ rules:
     - alumni_award_name: null
   steps: 
   - intent: alumni_awards
-  - action: utter_alumni_awards
+  - action: action_alumni_awards
 
 - rule: Answer Alumni Awards
   condition:
