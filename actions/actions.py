@@ -316,6 +316,70 @@ class ActionGlobalAlumniNetwork(Action):
         dispatcher.utter_message(text=output)
         return []
 
+class ActionRTI(Action):
+    def name(self) -> Text:
+        return "action_RTI"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Right_To_Information/information/RTI")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can find more information about RTI process at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionTopDonors(Action):
+    def name(self) -> Text:
+        return "action_top_donors"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/top_donors")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can get information about the Top Donors at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionDonationSchemes(Action):
+    def name(self) -> Text:
+        return "action_alumni_schemes"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/donation_schemes")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can get complete information about the schemes under which the alumni can donate at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
+class ActionGlobalAlumniNetwork(Action):
+    def name(self) -> Text:
+        return "action_global_alumni_network"
+
+    def run(self, dispatcher: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Alumni/global_network/alumni")
+        json_data = response.json()
+        url = json_data["url"]
+    
+        output = "You can get complete information about the Global Network for IITR Alumni at {}".format(url)
+        dispatcher.utter_message(text=output)
+        return []
+
 class ActionDonate(Action):
 
     def name(self) -> Text:
@@ -327,7 +391,7 @@ class ActionDonate(Action):
         
         scheme = tracker.slots.get("scheme_name")
         response = requests.get("http://mdg.iitr.ac.in/projects/iitr_chatbot/api/chatbot/Donations/link_to/how_to_donate")
-        json_data = response.json()
+        json_data = response.json();
         url_how_to_donate = json_data["url"]
         
         if scheme == None:
