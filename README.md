@@ -22,11 +22,10 @@ $ pip3 install rasa==2.0.0rc2
 - Initialize a **rasa** project
 - The CLI will ask you before training an initial chatbot. **Don't train it for now**.
 ```
-$ mkdir rasa_bot
-$ cd rasa_bot
-$ rasa init
+$ git clone https://github.com/mdg-iitr/IITR_ChatBot.git
+
 ```
-- Carry out any **one** of the following steps as a solution to this [issue](https://github.com/RasaHQ/rasa/issues/6806):
+- Carry out the **second** of the following steps as a solution to this [issue](https://github.com/RasaHQ/rasa/issues/6806):
 
     1. **First Method**: Install a public tokenizer
 
