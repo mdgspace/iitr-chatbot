@@ -3,6 +3,35 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Framework: RASA](https://img.shields.io/badge/Framework-RASA-purple.svg)](https://rasa.com/)
 
+## Overview
+The Pandemic has highlighted the significance of online services / tech support- many organizations haven been seen incorporating chatbots for their websites. Seeing this, our project has been proposed in order to develop an assistance Chat Bot for the IIT Roorkee(our institute) website.
+
+## Tech Stack
+
+**ChatBot Framework**
+- We have used the **RASA** framework to implement the shell version for our chatbot.
+- RASA allows easy integration between the ML and the deployment parts, along with providing a neat architecture for managing the code modules.
+
+**Backend**
+- For developing the API for our chatbot, we have used the **Django** framework. It is very light and easily integrable with RASA. This API can then be easily integrated with the IITR website.
+- We carried out Web Scraping methods using Beautiful Soup (the python library) to get the URL links of required sections from the institute website.
+
+
+## Features:
+- **For v1**, the ChatBot has been trained while focusing on the following sections:
+   - admissions
+   - academics, departments, programmes
+   - administration
+   - research and development
+   - awards and scholarships
+   - RTI
+   - recruitments
+   - donations 
+   - alumni 
+   
+ - As proposed, the ChatBot answers humanely, and provides an appropriate answer along with a custom link for specific questions.
+ - **Wanna try out the ChatBot yourself? Simply follow the setup instructions below ;)**
+
 ## Setup
 
 - Update **pip**
