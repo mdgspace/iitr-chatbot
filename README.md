@@ -30,6 +30,7 @@ The Pandemic has highlighted the significance of online services / tech support-
    - alumni 
    
  - As proposed, the ChatBot answers humanely, and provides an appropriate answer along with a custom link for specific questions.
+ - ![alt hey](https://github.com/mdg-iitr/IITR_ChatBot/blob/master/images/convo.png?raw=true)
  - **Wanna try out the ChatBot yourself? Simply follow the setup instructions below ;)**
 
 ## Setup
