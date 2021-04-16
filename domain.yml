@@ -72,6 +72,10 @@ slots:
     type: text
     auto_fill: True
 
+  recruitments_name:
+    type: text
+    auto_fill: True
+
   scheme_name:
     type: text
     auto_fill: True
